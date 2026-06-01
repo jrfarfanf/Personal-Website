@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jose Rafael Farfan — BI Analyst · The Dashboard</title>
+<meta name="description" content="Senior BI Analyst & Data Strategist — Power BI, DAX, SQL, Azure DevOps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F7F9; --surface:#FFFFFF; --surface-2:#FBFBFC; --border:#E7E9EE;
+  --text:#15181E; --muted:#5C6470; --faint:#8A93A0;
+  --accent:#7A1228; --accent-2:#9B2335; --accent-dim:rgba(122,18,40,.07);
+  --good:#0F7A52; --good-dim:rgba(15,122,82,.10);
+  --amber:#9A6B00; --amber-dim:rgba(180,130,0,.12);
+  --r:14px; --r-sm:9px;
+  --sh-sm:0 1px 2px rgba(16,20,30,.05),0 1px 3px rgba(16,20,30,.04);
+  --sh-md:0 6px 18px -6px rgba(16,20,30,.12),0 2px 6px -2px rgba(16,20,30,.06);
+  --sh-lg:0 18px 40px -12px rgba(16,20,30,.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.mono{font-family:'JetBrains Mono',monospace;}
+
+/* ── Shell ── */
+.app{display:grid;grid-template-columns:272px 1fr;min-height:100vh;}
+
+/* ── Sidebar ── */
+.sidebar{position:sticky;top:0;align-self:start;height:100vh;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;padding:26px 22px;overflow-y:auto;}
+.brand{display:flex;align-items:center;gap:13px;padding-bottom:22px;border-bottom:1px solid var(--border);}
+.brand img{width:48px;height:48px;border-radius:11px;object-fit:cover;border:1.5px solid var(--accent);}
+.brand .b-name{font-size:14.5px;font-weight:700;letter-spacing:-.01em;line-height:1.25;}
+.brand .b-role{font-size:11.5px;color:var(--muted);margin-top:2px;}
+.status{display:flex;align-items:center;gap:7px;margin:18px 0 4px;font-size:11.5px;color:var(--muted);}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--good);box-shadow:0 0 0 3px var(--good-dim);}
+.nav{display:flex;flex-direction:column;gap:2px;margin-top:18px;}
+.nav-label{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);padding:0 12px;margin-bottom:8px;}
+.nav a{display:flex;align-items:center;gap:11px;padding:9px 12px;border-radius:var(--r-sm);font-size:13.5px;font-weight:500;color:var(--muted);transition:.16s;}
+.nav a:hover{background:var(--surface-2);color:var(--text);}
+.nav a.active{background:var(--accent-dim);color:var(--accent);font-weight:600;}
+.nav a .ic{width:16px;height:16px;flex-shrink:0;opacity:.85;}
+.side-foot{margin-top:auto;padding-top:22px;display:flex;flex-direction:column;gap:9px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;min-height:44px;border-radius:var(--r-sm);font-size:13.5px;font-weight:600;cursor:pointer;transition:.16s;border:1px solid transparent;font-family:inherit;}
+.btn-primary{background:var(--accent);color:#fff;}
+.btn-primary:hover{background:#5e0d1f;transform:translateY(-1px);box-shadow:0 6px 18px -4px rgba(122,18,40,.45);}
+.btn-ghost{border-color:var(--border);color:var(--muted);background:var(--surface);}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+/* ── Main ── */
+.main{position:relative;padding:30px 38px 60px;background-image:linear-gradient(rgba(16,20,30,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(16,20,30,.022) 1px,transparent 1px);background-size:46px 46px;}
+.topbar{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:26px;}
+.crumb{font-size:12px;color:var(--faint);letter-spacing:.02em;}
+.crumb b{color:var(--muted);font-weight:600;}
+.topbar h1{font-size:26px;font-weight:700;letter-spacing:-.02em;margin-top:5px;}
+.topbar .meta{display:flex;gap:9px;flex-wrap:wrap;}
+.pill{font-size:11.5px;font-weight:500;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:5px 12px;display:inline-flex;align-items:center;gap:6px;}
+
+/* ── KPI tiles ── */
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:30px;}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;box-shadow:var(--sh-sm);position:relative;overflow:hidden;}
+.kpi::after{content:"";position:absolute;right:-18px;top:-18px;width:70px;height:70px;border-radius:50%;background:var(--accent-dim);}
+.kpi .k-label{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);}
+.kpi .k-val{font-size:30px;font-weight:700;letter-spacing:-.03em;margin-top:8px;line-height:1;}
+.kpi .k-val span{font-size:16px;color:var(--accent);}
+.kpi .k-sub{font-size:12px;color:var(--muted);margin-top:7px;}
+
+/* ── Panels ── */
+.section{margin-bottom:30px;scroll-margin-top:24px;}
+.s-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px;}
+.s-head h2{font-size:15px;font-weight:700;letter-spacing:-.01em;display:flex;align-items:center;gap:9px;}
+.s-head h2 .tag{font-size:10px;font-weight:600;letter-spacing:.1em;color:var(--accent);background:var(--accent-dim);padding:3px 8px;border-radius:6px;}
+.s-head .s-note{font-size:12px;color:var(--faint);}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh-sm);}
+
+/* value prop */
+.valuecard{padding:30px 32px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;}
+.valuecard .vp{font-size:22px;font-weight:600;letter-spacing:-.02em;line-height:1.4;max-width:680px;}
+.valuecard .vp b{color:var(--accent);font-weight:700;}
+.valuecard .vp-sub{font-size:13.5px;color:var(--muted);margin-top:14px;font-weight:400;}
+.spark{display:flex;align-items:flex-end;gap:6px;height:84px;}
+.spark i{width:13px;border-radius:4px 4px 2px 2px;background:linear-gradient(var(--accent-2),var(--accent));opacity:.85;display:block;}
+
+/* skills matrix */
+.matrix{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.mtile{padding:20px;}
+.mtile h3{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.mtile h3::before{content:"";width:9px;height:9px;border-radius:3px;background:var(--accent);}
+.chips{display:flex;flex-wrap:wrap;gap:7px;}
+.chip{font-size:12.5px;font-weight:500;color:var(--text);background:var(--surface-2);border:1px solid var(--border);padding:5px 11px;border-radius:7px;transition:.16s;cursor:default;}
+.chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim);}
+.chip.solid{background:var(--accent-dim);border-color:transparent;color:var(--accent);font-weight:600;}
+
+/* experience cards */
+.exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.exp{padding:22px 24px;display:flex;flex-direction:column;gap:12px;transition:.18s;}
+.exp:hover{box-shadow:var(--sh-md);transform:translateY(-2px);}
+.exp .e-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+.exp .e-co{font-size:12px;font-weight:600;color:var(--accent);}
+.exp .e-when{font-size:11px;color:var(--faint);white-space:nowrap;}
+.exp .e-role{font-size:16px;font-weight:700;letter-spacing:-.01em;}
+.exp .e-loc{font-size:11.5px;color:var(--muted);margin-top:-6px;}
+.exp p{font-size:13px;color:var(--muted);line-height:1.6;}
+.exp .e-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;}
+.exp .e-chips .chip{font-size:11px;padding:3px 9px;}
+.exp.muted .e-co{color:var(--muted);}
+.exp.span2{grid-column:span 2;}
+
+/* projects */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.proj{padding:0;overflow:hidden;display:flex;flex-direction:column;transition:.18s;cursor:pointer;}
+.proj:hover{box-shadow:var(--sh-md);transform:translateY(-3px);}
+.proj .viz{height:118px;background:var(--surface-2);border-bottom:1px solid var(--border);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:14px;gap:8px;}
+.proj .viz.bars i{flex:1;border-radius:4px 4px 0 0;background:linear-gradient(var(--accent-2),var(--accent));opacity:.8;}
+.proj .viz .vlabel{position:absolute;top:11px;left:14px;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);}
+.proj .viz.line svg{position:absolute;inset:0;width:100%;height:100%;}
+.proj .viz.donut{align-items:center;justify-content:center;}
+.proj .p-body{padding:18px 20px;display:flex;flex-direction:column;gap:10px;flex:1;}
+.proj .p-co{font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);}
+.proj .p-title{font-size:15px;font-weight:700;letter-spacing:-.01em;line-height:1.3;}
+.proj .p-desc{font-size:12.5px;color:var(--muted);line-height:1.55;}
+.proj .p-chips{display:flex;flex-wrap:wrap;gap:5px;}
+.proj .p-chips .chip{font-size:10.5px;padding:3px 8px;}
+.proj .p-impact{margin-top:auto;font-size:12px;color:var(--text);padding-top:12px;border-top:1px solid var(--border);display:flex;align-items:center;gap:8px;}
+.proj .p-impact .ar{color:var(--good);font-weight:700;}
+.est{border-bottom:1px dotted var(--faint);cursor:help;}
+.est sup{font-size:8.5px;color:var(--faint);letter-spacing:.04em;margin-left:2px;font-weight:600;}
+
+/* contact */
+.contact{padding:34px 36px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;background:linear-gradient(120deg,var(--surface),var(--surface-2));}
+.contact h2{font-size:22px;font-weight:700;letter-spacing:-.02em;}
+.contact p{font-size:13.5px;color:var(--muted);margin-top:8px;max-width:440px;}
+.contact .c-actions{display:flex;gap:11px;flex-wrap:wrap;}
+
+.legend{font-size:11px;color:var(--faint);margin-top:18px;display:flex;align-items:center;gap:7px;}
+.legend .est{cursor:default;}
+
+/* responsive */
+@media(max-width:980px){
+  .app{grid-template-columns:1fr;}
+  .sidebar{position:static;height:auto;flex-direction:row;align-items:center;flex-wrap:wrap;gap:14px;border-right:none;border-bottom:1px solid var(--border);}
+  .brand{border-bottom:none;padding-bottom:0;}
+  .status{margin:0;}
+  .nav{flex-direction:row;flex-wrap:wrap;margin:0;gap:4px;}
+  .nav-label{display:none;}
+  .side-foot{margin:0 0 0 auto;flex-direction:row;padding:0;}
+  .kpi-row{grid-template-columns:repeat(2,1fr);}
+  .matrix,.proj-grid{grid-template-columns:1fr 1fr;}
+  .exp-grid{grid-template-columns:1fr;}
+  .exp.span2{grid-column:auto;}
+  .valuecard{grid-template-columns:1fr;}
+}
+@media(max-width:620px){
+  .main{padding:24px 18px 48px;}
+  .kpi-row,.matrix,.proj-grid{grid-template-columns:1fr;}
+  .nav a span{display:none;}
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar" data-screen-label="Dashboard sidebar">
+    <div class="brand">
+      <img src="assets/profile.png" alt="Jose Rafael Farfan">
+      <div>
+        <div class="b-name">Jose R. Farfan</div>
+        <div class="b-role">Senior BI Analyst</div>
+      </div>
+    </div>
+    <div class="status"><span class="dot"></span> Available · UK &amp; International</div>
+    <nav class="nav" id="nav">
+      <div class="nav-label">Workspace</div>
+      <a href="#overview" class="active"><span>Overview</span></a>
+      <a href="#skills"><span>Skills Matrix</span></a>
+      <a href="#experience"><span>Experience</span></a>
+      <a href="#projects"><span>Projects</span></a>
+      <a href="#contact"><span>Contact</span></a>
+    </nav>
+    <div class="side-foot">
+      <a href="https://linkedin.com/in/jose-rafael-farfan" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn ↗</a>
+      <a href="#" class="btn btn-ghost">Download CV</a>
+    </div>
+  </aside>
+
+  <!-- ── Main ── -->
+  <main class="main">
+
+    <!-- Topbar -->
+    <header class="topbar" id="overview">
+      <div>
+        <div class="crumb"><b>Portfolio</b> / Overview</div>
+        <h1>Jose Rafael Farfan Fernandez</h1>
+      </div>
+      <div class="meta">
+        <span class="pill"><span class="dot"></span> Senior BI Analyst &amp; Data Strategist</span>
+        <span class="pill">🇬🇧 EN Fluent · 🇻🇪 ES Native</span>
+      </div>
+    </header>
+
+    <!-- KPI tiles -->
+    <div class="kpi-row">
+      <div class="kpi"><div class="k-label">Experience</div><div class="k-val">8<span>+ yrs</span></div><div class="k-sub">in BI &amp; data strategy</div></div>
+      <div class="kpi"><div class="k-label">Reach</div><div class="k-val">2<span> continents</span></div><div class="k-sub">UK &amp; Latin America</div></div>
+      <div class="kpi"><div class="k-label">Org scale</div><div class="k-val">£25<span>B+</span></div><div class="k-sub">FMCG org (BAT)</div></div>
+      <div class="kpi"><div class="k-label">Foundation</div><div class="k-val">Mech.<span></span></div><div class="k-sub">Engineering degree</div></div>
+    </div>
+
+    <!-- Value prop -->
+    <section class="section">
+      <div class="card valuecard">
+        <div>
+          <div class="vp">I turn complex operational and financial data into <b>scalable models and dashboards</b> that give executives the insight to make data-driven decisions.</div>
+          <div class="vp-sub">Mechanical engineering background · I trace numbers back to what actually happened on the factory floor — not just visualize them.</div>
+        </div>
+        <div class="spark" id="spark"></div>
+      </div>
+    </section>
+
+    <!-- Skills matrix -->
+    <section class="section" id="skills">
+      <div class="s-head"><h2><span class="tag">04</span> Skills Matrix</h2><span class="s-note">Grouped by capability</span></div>
+      <div class="matrix">
+        <div class="card mtile"><h3>BI &amp; Visualization</h3><div class="chips">
+          <span class="chip solid">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query (M)</span><span class="chip">Data Modeling</span><span class="chip">KPI Design</span><span class="chip">Data Storytelling</span></div></div>
+        <div class="card mtile"><h3>Data Engineering</h3><div class="chips">
+          <span class="chip">SQL</span><span class="chip">MySQL</span><span class="chip">Apache PySpark</span><span class="chip">ETL Pipelines</span><span class="chip">Data Cleansing</span><span class="chip">Data Governance</span></div></div>
+        <div class="card mtile"><h3>Cloud &amp; Delivery</h3><div class="chips">
+          <span class="chip">Azure DevOps</span><span class="chip">Azure Synapse</span><span class="chip">Agile / Scrum</span><span class="chip">Sprint Planning</span><span class="chip">Backlog Mgmt</span></div></div>
+        <div class="card mtile"><h3>Analytics &amp; Methods</h3><div class="chips">
+          <span class="chip">Root Cause Analysis</span><span class="chip">Continuous Improvement</span><span class="chip">Lean</span><span class="chip">SPC</span><span class="chip">Design Thinking</span></div></div>
+        <div class="card mtile"><h3>Productivity</h3><div class="chips">
+          <span class="chip">Excel (Advanced)</span><span class="chip">SharePoint</span><span class="chip">AI Literacy</span><span class="chip">Prompt Engineering</span></div></div>
+        <div class="card mtile"><h3>Credentials</h3><div class="chips">
+          <span class="chip solid">PL-300 · in progress</span><span class="chip">PySpark · LinkedIn</span><span class="chip">PM Cert</span><span class="chip">DP-900 · planned</span></div></div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="s-head"><h2><span class="tag">02</span> Experience</h2><span class="s-note">8 years · two continents</span></div>
+      <div class="exp-grid">
+        <div class="card exp span2">
+          <div class="e-top"><span class="e-co">Biffa Waste Services</span><span class="e-when">Jan 2025 – Present · UK (Hybrid)</span></div>
+          <div class="e-role">Senior Business Intelligence Analyst</div>
+          <div class="e-loc">Current role</div>
+          <p>Internal BI consultant for Sales &amp; Finance — standardized data definitions and cut manual reporting workarounds across 3+ high-priority streams. Introduced Azure DevOps sprint workflows, championing Agile delivery in a historically ad-hoc BI environment.</p>
+          <div class="e-chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Azure DevOps</span><span class="chip">Agile</span><span class="chip">SQL</span><span class="chip">Data Modeling</span></div>
+        </div>
+        <div class="card exp">
+          <div class="e-top"><span class="e-co">British American Tobacco</span><span class="e-when">2022 – 2025 · Southampton</span></div>
+          <div class="e-role">Business Intelligence Executive</div>
+          <div class="e-loc">£25B+ FMCG organization</div>
+          <p>Global BI &amp; operational reporting for a Continuous Improvement function. Designed SLA frameworks, reduced delivery variability, and delivered executive data storytelling bridging technical analysis with commercial decisions.</p>
+          <div class="e-chips"><span class="chip">Power BI</span><span class="chip">Data Governance</span><span class="chip">Stakeholder Mgmt</span></div>
+        </div>
+        <div class="card exp">
+          <div class="e-top"><span class="e-co">British American Tobacco</span><span class="e-when">2021 – 2022 · Venezuela</span></div>
+          <div class="e-role">Business Intelligence Engineer</div>
+          <div class="e-loc">Manufacturing environments</div>
+          <p>End-to-end BI reporting — data cleansing, ETL, and Power BI dashboards monitoring production KPIs. Collaborated with operations to surface corrective actions and efficiency improvements.</p>
+          <div class="e-chips"><span class="chip">Power BI</span><span class="chip">SQL</span><span class="chip">ETL</span></div>
+        </div>
+        <div class="card exp muted">
+          <div class="e-top"><span class="e-co">ASIS Consulting</span><span class="e-when">2019 – 2021 · Caracas</span></div>
+          <div class="e-role">Business Intelligence Developer</div>
+          <div class="e-loc">Multi-client engagements</div>
+          <p>Built Power BI reports across clients — financial modeling with DAX, time intelligence, workspace governance, and MySQL data-integrity collaboration.</p>
+          <div class="e-chips"><span class="chip">DAX</span><span class="chip">MySQL</span><span class="chip">Power BI Service</span></div>
+        </div>
+        <div class="card exp muted">
+          <div class="e-top"><span class="e-co">3D Tech · Pressure Vessels</span><span class="e-when">2016 – 2019 · Venezuela</span></div>
+          <div class="e-role">Engineering Foundation</div>
+          <div class="e-loc">3D printing · ASME / API vessels</div>
+          <p>Operated a 3D printing lab and contributed to high-pressure vessel design, fabrication and inspection under ASME, AWS &amp; API standards — the operational lens behind the data work.</p>
+          <div class="e-chips"><span class="chip">Mechanical Eng.</span><span class="chip">NDT / HT</span><span class="chip">Tech Docs</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="s-head"><h2><span class="tag">03</span> Projects</h2><span class="s-note">Selected BI deliveries</span></div>
+      <div class="proj-grid">
+        <article class="card proj">
+          <div class="viz bars"><span class="vlabel">Contract performance</span></div>
+          <div class="p-body">
+            <div class="p-co">Biffa · 2025</div>
+            <div class="p-title">Sales Performance Dashboard</div>
+            <div class="p-desc">Real-time Power BI dashboard consolidating contract, billing &amp; pipeline data into one source of truth for commercial and finance leadership.</div>
+            <div class="p-chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">SQL</span></div>
+            <div class="p-impact"><span class="ar">↑</span> Cut manual reporting by <span class="est">~8 hrs/week<sup>est</sup></span></div>
+          </div>
+        </article>
+        <article class="card proj">
+          <div class="viz line"><span class="vlabel">SLA breaches ↓</span>
+            <svg viewBox="0 0 300 118" preserveAspectRatio="none"><polyline points="0,28 50,40 100,34 150,62 200,74 250,92 300,102" fill="none" stroke="#7A1228" stroke-width="3"/><polyline points="0,28 50,40 100,34 150,62 200,74 250,92 300,102 300,118 0,118" fill="rgba(122,18,40,.07)" stroke="none"/></svg></div>
+          <div class="p-body">
+            <div class="p-co">BAT · 2022–2025</div>
+            <div class="p-title">Global WPI Reporting Framework</div>
+            <div class="p-desc">Standardized operational reporting templates &amp; SLA frameworks deployed across regions, enabling cross-regional performance benchmarking.</div>
+            <div class="p-chips"><span class="chip">Power BI</span><span class="chip">Governance</span><span class="chip">SLA Design</span></div>
+            <div class="p-impact"><span class="ar">↑</span> SLA breaches <span class="est">−~30%<sup>est</sup></span> · <span class="est">12 countries<sup>est</sup></span></div>
+          </div>
+        </article>
+        <article class="card proj">
+          <div class="viz donut"><span class="vlabel">Yield trends</span>
+            <svg width="84" height="84" viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="#EEE" stroke-width="6"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#7A1228" stroke-width="6" stroke-dasharray="72 100" stroke-linecap="round" transform="rotate(-90 21 21)"/></svg></div>
+          <div class="p-body">
+            <div class="p-co">BAT · 2021–2022</div>
+            <div class="p-title">Manufacturing KPI Suite</div>
+            <div class="p-desc">End-to-end BI connecting factory-floor data to leadership dashboards — surfacing yield trends and triggering corrective-action workflows.</div>
+            <div class="p-chips"><span class="chip">ETL</span><span class="chip">SQL</span><span class="chip">Data Modeling</span></div>
+            <div class="p-impact"><span class="ar">↑</span> Corrective actions <span class="est">~3× faster<sup>est</sup></span></div>
+          </div>
+        </article>
+      </div>
+      <div class="legend"><span class="est">dotted<sup>est</sup></span> values are realistic estimates pending final figures.</div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="card contact">
+        <div>
+          <h2>Let's talk data.</h2>
+          <p>Open to senior BI, data strategy and analytics leadership roles across the UK and internationally. Hybrid &amp; remote welcome.</p>
+        </div>
+        <div class="c-actions">
+          <a href="https://linkedin.com/in/jose-rafael-farfan" target="_blank" rel="noopener" class="btn btn-primary">Connect on LinkedIn ↗</a>
+          <a href="mailto:jrfarfanf@gmail.com" class="btn btn-ghost">jrfarfanf@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+// spark bars
+(function(){
+  var s=document.getElementById('spark');if(!s)return;
+  var h=[34,52,40,66,58,80,72,92];
+  h.forEach(function(v){var i=document.createElement('i');i.style.height=v+'%';s.appendChild(i);});
+})();
+// project bar viz
+document.querySelectorAll('.viz.bars').forEach(function(v){
+  [42,64,50,78,60,90,72].forEach(function(h){var i=document.createElement('i');i.style.height=h+'%';v.appendChild(i);});
+});
+// scrollspy
+var links=[].slice.call(document.querySelectorAll('#nav a'));
+var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+function spy(){
+  var y=window.scrollY+160,idx=0;
+  secs.forEach(function(sec,i){if(sec&&sec.offsetTop<=y)idx=i;});
+  links.forEach(function(a,i){a.classList.toggle('active',i===idx);});
+}
+window.addEventListener('scroll',spy,{passive:true});spy();
+</script>
+</body>
+</html>
