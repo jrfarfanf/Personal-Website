@@ -22,12 +22,13 @@ document.querySelectorAll('.viz.bars').forEach(viz => {
 const navLinks = Array.from(document.querySelectorAll('#nav a'));
 const targets  = navLinks.map(a => document.querySelector(a.getAttribute('href')));
 
-function scrollspy() {
-  const y = window.scrollY + 160;
-  let idx = 0;
-  targets.forEach((sec, i) => { if (sec && sec.offsetTop <= y) idx = i; });
-  navLinks.forEach((a, i) => a.classList.toggle('active', i === idx));
-}
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    navLinks.forEach(a => a.classList.remove('active'));
+    const link = document.querySelector(`#nav a[href="#${entry.target.id}"]`);
+    if (link) link.classList.add('active');
+  });
+}, { rootMargin: '-50% 0px -50% 0px' });
 
-window.addEventListener('scroll', scrollspy, { passive: true });
-scrollspy();
+targets.forEach(sec => { if (sec) observer.observe(sec); });
