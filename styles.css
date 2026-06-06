@@ -98,6 +98,14 @@ a { color: inherit; text-decoration: none; }
   flex-shrink: 0;
 }
 
+.spons-note {
+  font-size: 10.5px;
+  color: var(--good);
+  font-weight: 600;
+  padding: 0 0 6px;
+  letter-spacing: .01em;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -135,6 +143,13 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   flex-direction: column;
   gap: 9px;
+}
+.built-note {
+  font-size: 10px;
+  color: var(--faint);
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 2px;
 }
 
 /* ── Buttons ─────────────────────────────────────────────────── */
@@ -205,6 +220,29 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 6px;
 }
+
+/* ── Language Toggle ─────────────────────────────────────────── */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.lang-opt {
+  display: flex;
+  align-items: center;
+  padding: 5px 13px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  transition: .16s;
+  white-space: nowrap;
+}
+.lang-opt + .lang-opt  { border-left: 1px solid var(--border); }
+.lang-opt.lang-active  { background: var(--accent); color: #fff; font-weight: 600; }
+a.lang-opt:hover       { background: var(--surface-2); color: var(--text); }
 
 /* ── KPI Tiles ───────────────────────────────────────────────── */
 .kpi-row {
@@ -487,15 +525,42 @@ a { color: inherit; text-decoration: none; }
 .contact-card {
   padding: 34px 36px;
   display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: linear-gradient(120deg, var(--surface), var(--surface-2));
+}
+.contact-top {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;
-  background: linear-gradient(120deg, var(--surface), var(--surface-2));
+  margin-bottom: 20px;
+}
+.c-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
 }
 .contact-card h2 { font-size: 22px; font-weight: 700; letter-spacing: -.02em; }
 .contact-card p  { font-size: 13.5px; color: var(--muted); margin-top: 8px; max-width: 440px; }
 .contact-card .c-actions { display: flex; gap: 11px; flex-wrap: wrap; }
+.contact-card .contact-email-note {
+  font-size: 11.5px;
+  color: var(--faint);
+  margin-top: 0;
+  max-width: none;
+}
+.contact-card .contact-legal {
+  font-size: 11px;
+  color: var(--faint);
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  margin-top: 0;
+  max-width: none;
+}
 
 /* ── Responsive — 980px (sidebar → topbar) ───────────────────── */
 @media (max-width: 980px) {
@@ -531,7 +596,8 @@ a { color: inherit; text-decoration: none; }
   .kpi-row, .matrix, .proj-grid { grid-template-columns: 1fr; }
   .nav a span { display: none; }
   .topbar { flex-direction: column; align-items: flex-start; }
-  .contact-card { flex-direction: column; align-items: flex-start; }
+  .contact-top { flex-direction: column; align-items: flex-start; }
+  .c-right { align-items: flex-start; width: 100%; }
   .contact-card .c-actions { flex-direction: column; width: 100%; }
   .contact-card .c-actions .btn { justify-content: center; }
 }
