@@ -136,6 +136,8 @@ a { color: inherit; text-decoration: none; }
 }
 .nav a:hover  { background: var(--surface-2); color: var(--text); }
 .nav a.active { background: var(--accent-dim); color: var(--accent); font-weight: 600; }
+.nav a svg    { flex-shrink: 0; opacity: .55; transition: .16s; }
+.nav a:hover svg, .nav a.active svg { opacity: 1; }
 
 .side-foot {
   margin-top: auto;
@@ -144,6 +146,12 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   gap: 9px;
 }
+.side-foot .btn {
+  min-height: 36px;
+  padding: 7px 14px;
+  font-size: 13px;
+}
+.btn svg { flex-shrink: 0; }
 .built-note {
   font-size: 10px;
   color: var(--faint);
@@ -243,6 +251,21 @@ a { color: inherit; text-decoration: none; }
 .lang-opt + .lang-opt  { border-left: 1px solid var(--border); }
 .lang-opt.lang-active  { background: var(--accent); color: #fff; font-weight: 600; }
 a.lang-opt:hover       { background: var(--surface-2); color: var(--text); }
+.lang-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.lang-hint {
+  font-size: 9.5px;
+  color: var(--faint);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 
 /* ── KPI Tiles ───────────────────────────────────────────────── */
 .kpi-row {
