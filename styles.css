@@ -79,9 +79,8 @@ a { color: inherit; text-decoration: none; }
   font-size: 11.5px;
   color: var(--muted);
   margin-top: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-bottom: 4px;
+  line-height: 1.4;
 }
 
 .status {
@@ -426,6 +425,38 @@ a.lang-opt:hover       { background: var(--surface-2); color: var(--text); }
 }
 .chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
 .chip.solid  { background: var(--accent-dim); border-color: transparent; color: var(--accent); font-weight: 600; }
+
+/* ── Read More ───────────────────────────────────────────────── */
+details.read-more-wrap { margin-top: 6px; }
+details.read-more-wrap summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+details.read-more-wrap summary::-webkit-details-marker { display: none; }
+details.read-more-wrap summary::after { content: " ↓"; font-size: 10px; }
+details.read-more-wrap[open] summary::after { content: " ↑"; }
+details.read-more-wrap .full-text {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+  animation: rmFadeIn .2s ease;
+}
+.proj details.read-more-wrap .full-text { font-size: 12.5px; }
+@keyframes rmFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 /* ── Experience ──────────────────────────────────────────────── */
 .exp-grid {
