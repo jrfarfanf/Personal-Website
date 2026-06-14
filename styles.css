@@ -637,6 +637,7 @@ details.read-more-wrap .full-text {
   }
   .brand     { border-bottom: none; padding-bottom: 0; }
   .status    { margin: 0; }
+  .spons-note { display: none; }
   .nav       { flex-direction: row; flex-wrap: wrap; margin: 0; gap: 4px; }
   .nav-label { display: none; }
   .nav a     { min-height: 36px; padding: 6px 12px; }
@@ -649,14 +650,29 @@ details.read-more-wrap .full-text {
   .spark     { display: none; }
 }
 
-/* ── Responsive — 620px (stack everything) ───────────────────── */
+/* ── Responsive — 620px (mobile phones) ──────────────────────── */
 @media (max-width: 620px) {
-  .main { padding: 24px 18px 48px; }
-  .kpi-row, .matrix, .proj-grid { grid-template-columns: 1fr; }
-  .nav a span { display: none; }
-  .topbar { flex-direction: column; align-items: flex-start; }
+  .main  { padding: 20px 16px 48px; }
+  /* kpi-row intentionally omitted — stays at repeat(2,1fr) from 980px rule */
+  .matrix, .proj-grid { grid-template-columns: 1fr; }
+  .nav a span  { display: none; }
+  .topbar      { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .topbar h1   { font-size: 22px; }
+  .meta        { width: 100%; justify-content: space-between; }
+  .e-top       { flex-wrap: wrap; gap: 3px; }
+  .e-when      { white-space: normal; font-size: 10.5px; }
+  .side-foot .btn:not(:first-child) { display: none; }
   .contact-top { flex-direction: column; align-items: flex-start; }
-  .c-right { align-items: flex-start; width: 100%; }
+  .c-right     { align-items: flex-start; width: 100%; }
   .contact-card .c-actions { flex-direction: column; width: 100%; }
   .contact-card .c-actions .btn { justify-content: center; }
+}
+
+/* ── Responsive — 480px (small phones: iPhone SE, Moto G) ────── */
+@media (max-width: 480px) {
+  .brand .b-role { display: none; }
+  .lang-hint     { display: none; }
+  .kpi .k-val    { font-size: 24px; }
+  .main          { padding: 16px 14px 48px; }
+  .contact-card  { padding: 24px 20px; }
 }
