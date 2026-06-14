@@ -626,7 +626,10 @@ details.read-more-wrap .full-text {
   .app { flex-direction: column; }
   .sidebar {
     position: static;
+    flex: 0 0 auto;
+    width: 100%;
     height: auto;
+    overflow: visible;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
@@ -655,24 +658,37 @@ details.read-more-wrap .full-text {
   .main  { padding: 20px 16px 48px; }
   /* kpi-row intentionally omitted — stays at repeat(2,1fr) from 980px rule */
   .matrix, .proj-grid { grid-template-columns: 1fr; }
-  .nav a span  { display: none; }
   .topbar      { flex-direction: column; align-items: flex-start; gap: 10px; }
   .topbar h1   { font-size: 22px; }
   .meta        { width: 100%; justify-content: space-between; }
   .e-top       { flex-wrap: wrap; gap: 3px; }
   .e-when      { white-space: normal; font-size: 10.5px; }
-  .side-foot .btn:not(:first-child) { display: none; }
   .contact-top { flex-direction: column; align-items: flex-start; }
   .c-right     { align-items: flex-start; width: 100%; }
   .contact-card .c-actions { flex-direction: column; width: 100%; }
   .contact-card .c-actions .btn { justify-content: center; }
+
+  /* Mobile header: single compact bar (avatar · name · icon nav · LinkedIn) */
+  .sidebar           { flex-wrap: nowrap; align-items: center; gap: 8px; padding: 7px 14px; }
+  .brand             { order: 1; flex: 0 0 auto; gap: 8px; }
+  .brand img         { display: block; width: 34px; height: 34px; }
+  .brand .b-name     { font-size: 13px; white-space: nowrap; }
+  .brand .b-role     { display: none; }
+  .status            { display: none; }
+  .nav               { order: 2; flex: 1; flex-wrap: nowrap; justify-content: space-around; margin: 0; gap: 0; }
+  .nav a             { flex: 0 1 auto; justify-content: center; min-height: 38px; padding: 6px 8px; }
+  .nav a span        { display: none; }
+  .side-foot         { order: 3; flex: 0 0 auto; margin: 0; }
+  .side-foot .btn:not(:first-child) { display: none; }
+  .side-foot .btn    { min-height: 32px; padding: 5px 11px; font-size: 12px; }
 }
 
 /* ── Responsive — 480px (small phones: iPhone SE, Moto G) ────── */
 @media (max-width: 480px) {
-  .brand .b-role { display: none; }
-  .lang-hint     { display: none; }
-  .kpi .k-val    { font-size: 24px; }
-  .main          { padding: 16px 14px 48px; }
-  .contact-card  { padding: 24px 20px; }
+  .lang-hint    { display: none; }
+  .kpi .k-val   { font-size: 24px; }
+  .main         { padding: 16px 14px 48px; }
+  .contact-card { padding: 24px 20px; }
+  /* Keep avatar for the personal touch, drop the name text — it's the H1 right below */
+  .brand .b-name { display: none; }
 }
