@@ -32,3 +32,18 @@ const observer = new IntersectionObserver(entries => {
 }, { rootMargin: '-50% 0px -50% 0px' });
 
 targets.forEach(sec => { if (sec) observer.observe(sec); });
+
+// ── Mobile CV dock (reveals once the topbar CV button scrolls away) ──
+(function () {
+  const dock = document.getElementById('cvDock');
+  const cta  = document.querySelector('.topbar-cta');
+  if (!dock || !cta) return;
+
+  const io = new IntersectionObserver(([entry]) => {
+    const hidden = !entry.isIntersecting;
+    dock.classList.toggle('show', hidden);
+    dock.setAttribute('aria-hidden', hidden ? 'false' : 'true');
+  }, { threshold: 0 });
+
+  io.observe(cta);
+})();

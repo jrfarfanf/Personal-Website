@@ -220,6 +220,9 @@ a { color: inherit; text-decoration: none; }
   margin-top: 5px;
 }
 .topbar .meta { display: flex; gap: 9px; flex-wrap: wrap; align-items: flex-end; }
+/* Mobile-only CV call-to-action — desktop uses the sidebar button instead */
+.topbar-cta { display: none; }
+.cv-dock { display: none; }
 .pill {
   font-size: 11.5px;
   font-weight: 500;
@@ -661,6 +664,34 @@ details.read-more-wrap .full-text {
   .topbar      { flex-direction: column; align-items: flex-start; gap: 10px; }
   .topbar h1   { font-size: 22px; }
   .meta        { width: 100%; justify-content: space-between; }
+  .topbar-cta  { display: flex; width: 100%; margin-top: 2px; }
+  .topbar-cta .btn { width: 100%; min-height: 46px; font-size: 14px; }
+
+  /* GitHub link dropped from the crumb on phones — CV is the priority here */
+  .crumb-gh { display: none; }
+
+  /* Sticky CV dock — fades in once .topbar-cta scrolls out of view (script.js) */
+  .cv-dock {
+    display: block;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 60;
+    padding: 10px 14px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    background: rgba(255, 255, 255, .93);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid var(--border);
+    opacity: 0;
+    transform: translateY(110%);
+    pointer-events: none;
+    transition: transform .22s ease, opacity .22s ease;
+  }
+  .cv-dock.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .cv-dock .btn { width: 100%; min-height: 46px; font-size: 14px; }
+
+  /* Room so the dock never covers the last line of content */
+  .main { padding-bottom: 96px; }
   .e-top       { flex-wrap: wrap; gap: 3px; }
   .e-when      { white-space: normal; font-size: 10.5px; }
   .contact-top { flex-direction: column; align-items: flex-start; }
@@ -691,4 +722,9 @@ details.read-more-wrap .full-text {
   .contact-card { padding: 24px 20px; }
   /* Keep avatar for the personal touch, drop the name text — it's the H1 right below */
   .brand .b-name { display: none; }
+}
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .cv-dock { transition: none; }
 }
