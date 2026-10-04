@@ -1,3 +1,12 @@
+/* ── Font (self-hosted Inter, latin subset, variable 400–700) ─── */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/fonts/inter-latin-var.woff2') format('woff2');
+}
+
 /* ── Design Tokens ───────────────────────────────────────────── */
 :root {
   --bg:         #F6F7F9;
