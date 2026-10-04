@@ -2,7 +2,7 @@
 
 Copy these values exactly into **LinkedIn**, the **résumé** and the **website**. If something changes, update this file first, then the three places.
 
-*Last updated: 4 October 2026*
+*Last updated: 4 October 2026 (metrics added)*
 
 ---
 
@@ -54,23 +54,37 @@ Project Management, Tecnología Financiera (2016) · Change Management Foundatio
 
 ## 4. Approved numbers
 
-Use only these, phrased the same way everywhere. Add new ones here first, from METRICS.md.
+Use only these, phrased the same way everywhere. Methods are in RESUME-OUTLINE.md.
 
 | Claim | Wording |
 |---|---|
-| Users | 500+ users on the Sales & Finance semantic model |
-| Savings (Biffa) | ~$52K (£40K) a year in manual reporting labor |
+| Users (Biffa) | 500+ **active** users on the Sales & Finance semantic model |
+| Reach (Biffa) | every UK region, all sales channels (field, telesales, e-commerce), Finance and leadership |
+| Savings (Biffa) | ~13,500 manual requests a year eliminated = ~$52K (£40K) a year in labor |
+| Processes replaced (Biffa) | 5+ siloed Excel processes |
+| Refresh (Biffa) | 20 → 5 minutes, covering more data |
+| Team (Biffa) | 8-person BI team on Azure DevOps sprints |
 | Source systems | 3 (NetSuite, Dayforce, contracts) |
-| Countries (BAT) | 12+ countries |
-| Hours saved (BAT CR tool) | ~200+ hours a month |
-| Views (BAT CR tool) | 3K+ views a month |
-| MTBF (BAT plant) | from under 10 to 60+ minutes (**6×**; never "600%") |
+| CR volume (BAT) | 3,000+ change requests a month, across five continents |
+| CR tool (BAT) | 200+ CR types; ~5 → ~1 minute per request; 200+ hours saved a month; ~10% fewer incorrect requests; 3K+ views a month |
+| Data quality (BAT) | helped sustain the 99% master-data quality compliance target |
+| People (BAT plant) | 20+ factory technicians as direct reports |
+| Plant scope (BAT) | 12 production lines; 80+ users |
+| MTBF (BAT plant) | packing-machine MTBF from under 10 to 60+ minutes (**6×**; never "600%") |
+| OEE (BAT plant) | ~65% → ~71% over the year (target 70%) |
+| Clients (ASIS) | 5+ major tax-consulting clients |
+| 3D TECH | 6+ medical models a month (mainly jaw models) |
+| VHICOA | 2–3 vessel projects, each $30M+ |
+| Mentoring | 5+ team members mentored |
+| Awards | Nominee, Diamonds Award (Biffa) · Digital Learner Award (BAT) |
+
+**Not to be used:** "12+ countries" (not confirmed; say "five continents" or "global"), and any claim that the CR tool reduced SLA breaches.
 
 ## 5. Skills: top 3 everywhere
 
 **Power BI · DAX · Microsoft Fabric.** Pin these as LinkedIn Top Skills, list them first in the résumé Skills section, and show them as solid chips on the site.
 
-Full list (all confirmed true): Power BI, DAX, Power Query (M), T-SQL, MySQL, Microsoft Fabric (Lakehouse, Warehouse, Dataflows Gen2, PySpark notebooks), semantic models, star / galaxy schema, row-level security, deployment pipelines, data governance, data quality, master data management, KPI definition, stakeholder management, requirements gathering, Azure DevOps, Agile / Scrum, SAP ECC / Fiori, NetSuite, Dayforce, OEE, MTBF, Lean Six Sigma methods, SPC, root cause analysis, Excel / Power Pivot, Claude Code.
+Full list (all confirmed true): Power BI, DAX, Power Query (M), T-SQL, MySQL, Microsoft Fabric (Lakehouse, Warehouse, Dataflows Gen2, PySpark notebooks), semantic models, star / galaxy schema, row-level security, deployment pipelines, data governance, data quality, master data management, KPI definition, stakeholder management, change management, team leadership, mentoring, requirements gathering, Azure DevOps, Agile / Scrum, SAP ECC / Fiori, NetSuite, Dayforce, OEE, MTBF, Lean Six Sigma methods, SPC, root cause analysis, Excel / Power Pivot, Claude Code.
 
 **Not** to be listed: Azure Synapse.
 
@@ -87,16 +101,19 @@ Do these with **LinkedIn's display language set to English** (Settings → Accou
 - [ ] **BAT – BI Engineer**: location → *Caracas, Capital District, Venezuela* (currently "Distrito Federal").
 - [ ] **ASIS Consulting**: location → *Caracas, Capital District, Venezuela* (currently "Каракас").
 - [ ] **VHICOA**: title → *Junior Project Engineer* (currently "Project Engineer").
-- [ ] **3D TECH**: the first bullet says printers "(Powder, ABS and PLC)". Was "PLC" meant to be **PLA**? Fix it, and tidy the grammar ("Accountable for hold…").
+- [ ] **3D TECH**: replace the four bullets (they say "PLC" printers and "Accountable for hold…") with the RESUME-OUTLINE bullet: 6+ medical models a month, mainly jaw models.
 - [ ] **Languages**: delete and re-add as *English — Full professional proficiency* and *Spanish — Native or bilingual* (currently "Inglés (Professional Working)").
 - [ ] **Top skills**: pin Power BI, DAX, Microsoft Fabric (currently Scrum, KPI Dashboards, Lean Methodologies).
 - [ ] **Certifications → Courses**: move the five LinkedIn Learning items to *Courses*. They are courses, and listing them as certifications invites questions.
+- [ ] **Honors & awards** (new section): *Digital Learner Award, British American Tobacco* and *Nominee, Diamonds Award, Biffa*. Add the Diamonds nomination to the Biffa role description too.
+- [ ] **Experience descriptions**: paste the bullets from RESUME-OUTLINE.md so LinkedIn, the résumé and the site carry the same numbers.
+- [ ] **Featured**: add josefarfan.com and the résumé PDF link (https://josefarfan.com/assets/Jose-Farfan-Resume.pdf).
 - [ ] **Contact info**: phone (623) 260-1171, website https://josefarfan.com.
 - [ ] **Open to work** (recruiters only): titles *Senior BI Developer, Senior Power BI Developer, BI Lead, Analytics Engineer*; location *Phoenix, AZ* + *Remote (US)*.
 
 ## Résumé (designed version) edit list
 
-These fix the parsing problems found in the audit. They matter less once you use the ATS-safe version (see RESUME-OUTLINE.md), but the designed CV is still downloadable.
+The site now serves the ATS-safe résumé (`assets/Jose-Farfan-Resume.pdf` / `.docx`), and the old CV link redirects to it. If you want to keep using the designed Word CV elsewhere, make these fixes first:
 
 - [ ] Headline → *Senior BI Developer & Data Lead*, on its **own line** under the name.
 - [ ] Remove the ✅ emoji. It garbles parsers, and its font made the file 4 MB.

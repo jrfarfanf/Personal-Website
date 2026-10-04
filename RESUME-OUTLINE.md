@@ -1,17 +1,16 @@
 # ATS-safe résumé: outline & content
 
-Rebuild your résumé from this, top to bottom. Every title, date and employer comes from CONSISTENCY.md. Placeholders like `{B5}` point to METRICS.md: once you fill those in, I'll update this file and can generate the .docx and PDF for you.
+**The finished version is in `assets/Jose-Farfan-Resume.docx`** (edit it in Word) **and `assets/Jose-Farfan-Resume.pdf`** (the site's download). This file is the plain-text reference for both. Titles, dates and employers come from CONSISTENCY.md.
 
 ## Format rules (these are what make it parse)
 
 - **One column.** No tables, text boxes, columns, icons, emoji, photos or graphics.
-- **Font:** Calibri or Arial, 10.5–11 pt body, 12–14 pt section headings, name 18–20 pt. Margins 0.6–0.8".
-- **Headings:** use Word's built-in *Heading 1* style, bold, normal character spacing. Use exactly these names: **Summary, Skills, Experience, Education**.
-- **Contact details in the body**, not in Word's header/footer area.
-- **Each role on three lines:** Title / Employer — City, Country / MM/YYYY – MM/YYYY. Then 3–5 bullets.
-- **Bullets:** Word's standard round bullet. Start each with a verb. One line or two, never three.
-- **Length:** 2 pages maximum.
-- **Save both** `Jose-Farfan-Resume.docx` and `Jose-Farfan-Resume.pdf`. Before you export, set File → Properties → Title and Author.
+- **Font:** Calibri 10.5 pt body, 11.5 pt section headings, 20 pt name. US Letter, 0.7" side margins.
+- **Headings** use Word's built-in *Heading 1* style with normal character spacing: **Summary, Skills, Experience, Education, Awards & Training**.
+- **Contact details in the body**, never in Word's header/footer area.
+- **Each role on three lines:** Title / Employer — City, Country / MM/YYYY – MM/YYYY, then bullets.
+- **Length:** 2 pages.
+- **When you edit in Word:** keep the styles, set File → Properties (Title "Jose Farfan – Résumé", Author "Jose Farfan"), and export with File → Save As → PDF, keeping the same filename. Avoid emoji: a single one embedded a 7.7 MB font last time.
 
 ---
 
@@ -19,19 +18,19 @@ Rebuild your résumé from this, top to bottom. Every title, date and employer c
 
 ```
 JOSE FARFAN
-Senior BI Developer & Data Lead | Power BI · Microsoft Fabric · DAX · SQL
+Senior BI Developer & Data Lead | Power BI, Microsoft Fabric, DAX, SQL
 Phoenix, AZ | (623) 260-1171 | jrfarfanf@gmail.com
 linkedin.com/in/jose-rafael-farfan | josefarfan.com
 Authorized to work in the US — no sponsorship required
 ```
 
 ### SUMMARY
-Senior BI developer and data lead with 7+ years in Power BI and 10+ years across engineering and data. Designs enterprise semantic models in Power BI and Microsoft Fabric, including a Sales & Finance model used by 500+ people, and leads the stakeholder alignment, governance and data quality that make them trusted. Mechanical engineer with hands-on manufacturing analytics experience (MTBF, OEE, Lean Six Sigma methods) across consumer goods, waste & recycling and consulting in the UK and Latin America. Bilingual English/Spanish.
+Senior BI developer and data lead with 7+ years in Power BI and 10+ years across engineering and data. Led an enterprise Sales & Finance semantic model used by 500+ active users across every UK region, removing ~$52K a year in manual reporting. Mechanical engineer who managed 20+ factory technicians and raised packing-machine MTBF 6× using sensor data and Lean Six Sigma methods. Known for stakeholder alignment, data governance and the change management that drives adoption. Bilingual English/Spanish.
 
 ### SKILLS
 - **BI & Modeling:** Power BI, DAX, Power Query (M), semantic models, star/galaxy schema, row-level security, deployment pipelines, KPI design, data storytelling
 - **Data Engineering:** T-SQL, MySQL, Microsoft Fabric (Lakehouse, Warehouse, Dataflows Gen2, PySpark notebooks), ETL/ELT
-- **Leadership & Governance:** stakeholder management, requirements gathering, data governance, data quality, master data management, KPI standardization, training & enablement
+- **Leadership & Governance:** stakeholder management, requirements gathering, data governance, data quality, master data management, KPI standardization, change management, team leadership, mentoring
 - **Delivery & Platforms:** Azure DevOps, Agile/Scrum, sprint planning, backlog management, SAP ECC/Fiori, NetSuite, Dayforce
 - **Manufacturing & Methods:** OEE, MTBF, Lean Six Sigma methods, Lean manufacturing, root cause analysis, SPC, Excel/Power Pivot
 - **Languages:** English (fluent), Spanish (native)
@@ -41,55 +40,60 @@ Senior BI developer and data lead with 7+ years in Power BI and 10+ years across
 **Senior Business Intelligence Analyst**
 Biffa — London, United Kingdom (Hybrid)
 01/2025 – Present
-- Designed and own the enterprise Sales & Finance semantic model in Power BI, a galaxy schema integrating NetSuite, Dayforce and contract data, now the single source of truth for 500+ users.
-- Automated `{B4}` manual reports across 3+ high-priority Sales and Finance streams, saving ~$52K (£40K) a year in labor.
-- Introduced Azure DevOps sprint delivery to a `{B5: n}`-person BI team, moving ad-hoc requests into a prioritized backlog; `{B5: result}`.
-- Standardized `{B6}` contract-lifecycle and cost-to-serve KPI definitions with Sales and Finance leadership `{B8: scope}`, eliminating manual reporting workarounds.
-- Own model governance (row-level security, deployment pipelines, refresh reliability) and serve as the escalation point for technical BI blockers; `{B7: before → after}`.
+- Led end to end the enterprise Sales & Finance semantic model in Power BI, a galaxy schema over NetSuite, Dayforce and contract data, now the single source of truth for 500+ active users across every UK region, all sales channels, Finance and leadership.
+- Replaced 5+ siloed Excel processes (pre-sales CRM, revenue projection, rolling revenue, churn, contract-health checks), eliminating ~13,500 manual requests a year, worth ~$52K (£40K) in labor.
+- Standardized revenue definitions, including the variants used for bonus calculations, with Sales and Finance leadership, so reporting and sales bonuses run on one agreed number.
+- Introduced Azure DevOps sprint delivery for the 8-person BI team, moving ad-hoc requests into a prioritized, visible backlog.
+- Own model governance (row-level security, deployment pipelines, refresh reliability); cut refresh time from 20 to 5 minutes while covering more data.
+- Nominated for Biffa's Diamonds high-performer award for the Sales & Finance model.
 
 **Business Intelligence Executive**
 British American Tobacco (BAT) — Southampton, United Kingdom
 12/2022 – 01/2025
-- Built Power BI SLA-compliance reporting for the global Operations Data Management team, tracking `{T6}` SKU master-data change requests a month in SAP ECC/Fiori across 12+ countries.
-- Designed a change-request selection tool that routes users to the correct option among `{T1}` CR types, cutting incorrect requests by `{T2}` and saving ~200 hours a month.
-- Designed and enforced SLA frameworks for global reporting processes, raising SLA attainment from `{T7}`.
+- Built Power BI SLA-compliance reporting for the global Operations Data Management team, covering 3,000+ SKU master-data change requests a month in SAP ECC/Fiori across five continents.
+- Designed a change-request selection tool that routes users to the right option among 200+ CR types, cutting selection time from ~5 to ~1 minute (200+ hours saved a month) and incorrect requests by ~10%.
+- Designed and enforced SLA frameworks for global reporting processes, reducing delivery variability for cross-functional teams.
+- Helped sustain the 99% master-data quality compliance target through monitoring and fast corrective fixes.
 - Delivered executive data storytelling for regional and global Continuous Improvement / Work Process Improvement leadership.
 
 **Business Intelligence Engineer**
 British American Tobacco (BAT) — Caracas, Venezuela
 06/2021 – 12/2022
-- Built an end-to-end Power BI KPI suite on machine sensor data (stops, MTBF, OEE, waste) covering `{V2}` lines/machines, used daily by `{V4}` operators, technicians and plant leaders.
-- Partnered with maintenance teams on root-cause analysis using Lean Six Sigma methods, raising MTBF from under 10 to 60+ minutes (6×) on `{V1: line}` over `{V1: months}`.
-- Reduced production waste by `{V3}` / improved OEE by `{V3}` points through corrective actions targeted by the dashboards.
-- Automated data cleansing and transformation in SQL and Power Query, replacing `{V5}` manual production reports.
+- Managed 20+ factory technicians as direct reports, building data-led routines into daily shop-floor work.
+- Built an end-to-end Power BI KPI suite on machine sensor data (stops, MTBF, OEE, waste) for 12 production lines, used by 80+ technicians, admin staff and factory leaders.
+- Partnered with maintenance on root-cause analysis using Lean Six Sigma methods, raising packing-machine MTBF from under 10 to 60+ minutes (6×) and plant OEE from ~65% to ~71%, beating the 70% target.
+- Automated data cleansing and transformation in SQL and Power Query, replacing manual production reports.
 
 **Business Intelligence Developer**
 ASIS Consulting — Caracas, Venezuela
 07/2019 – 06/2021
-- Delivered Power BI solutions for `{A1: n}` clients in `{A1: industries}`: financial modeling, tax and transactional reporting with DAX time intelligence.
+- Delivered Power BI solutions for 5+ major tax-consulting clients: financial modeling, tax and transactional reporting with DAX time intelligence.
 - Administered Power BI Service across client environments: workspace governance, deployment and user access.
-- Translated stakeholder requirements into scalable data models with the MySQL team, `{A2: e.g., cutting month-end reporting from X to Y days}`.
-
-**Earlier Engineering Experience**
+- Translated stakeholder requirements into scalable data models, working with the MySQL team to ensure data integrity.
 
 **3D Printing Engineer**
 3D TECH — Caracas, Venezuela
 03/2017 – 06/2019
-- Ran the 3D printing lab (powder and filament printers), preparing and quality-checking models for `{E1}` medical and industrial projects.
+- Operated and maintained the lab's 3D printers, producing 6+ medical models a month (mainly jaw models) used by doctors to plan procedures and prosthetics.
 
 **Junior Project Engineer**
 Venezuelan Heavy Industry CA (VHICOA) — Bolívar, Venezuela
 02/2016 – 02/2017
-- Part of the team that designed, fabricated and inspected high-pressure vessels for the oil industry to ASME, AWS and API standards; coordinated NDT and hydrostatic testing and tracked materials, labor and progress in Excel.
+- Worked on 2–3 high-pressure vessel projects for the oil industry, each worth $30M+, to ASME, AWS and API standards; prepared and checked drawings, coordinated NDT and hydrostatic testing, and tracked materials, labor and progress in Excel.
 
 ### EDUCATION
 **Bachelor of Engineering (B.Eng.), Mechanical Engineering**
 Universidad Metropolitana — Caracas, Venezuela
 2015
 
-### PROFESSIONAL DEVELOPMENT (optional; drop it if you're short of space)
-Project Management, Tecnología Financiera (2016) · Change Management Foundations; Having Difficult Conversations: A Guide for Managers (LinkedIn Learning)
+### AWARDS & TRAINING
+- Nominee, Diamonds Award (high-performer recognition), Biffa
+- Digital Learner Award, British American Tobacco
+- Project Management, Tecnología Financiera, 2016
+- LinkedIn Learning: Change Management Foundations; Having Difficult Conversations: A Guide for Managers
 
 ---
 
-**Leadership metrics (L1–L5)** each become one extra bullet under Biffa or BAT, e.g. *"Trained `{L1}` Sales and Finance users in self-service Power BI"* or *"Mentor `{L2}` analysts on DAX and modeling standards."* These are the bullets that most support the "Data Lead" half of the headline.
+### How the two savings figures are calculated (be ready to say this in interviews)
+- **Biffa ~$52K/yr:** ~13,500 report requests a year × 6 min each = ~1,350 hours × $39/hour average cost of the people requesting and processing them ≈ $52.7K (≈ £40K).
+- **BAT 200+ hrs/month:** 3,000+ change requests a month × ~4 minutes saved each (5 min → 1 min) ≈ 200 hours.
