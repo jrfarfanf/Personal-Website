@@ -50,17 +50,32 @@ targets.forEach(sec => { if (sec) observer.observe(sec); });
     if (extra.length < 2) return;
     const btn = document.createElement('button');
     btn.type = 'button';
-    btn.className = 'chip chip-toggle';
-    box.appendChild(btn);
+    btn.className = 'more-toggle';
+    box.after(btn);
     groups.push({ extra, btn });
   });
   const render = open => groups.forEach(({ extra, btn }) => {
     extra.forEach(c => { c.hidden = !open; });
     btn.setAttribute('aria-expanded', String(open));
     btn.textContent = open ? (es ? 'Ver menos' : 'Show less')
-                           : (es ? `+${extra.length} más` : `+${extra.length} more`);
+                           : (es ? `Ver ${extra.length} más` : `Show ${extra.length} more`);
   });
   let open = false;
   groups.forEach(({ btn }) => btn.addEventListener('click', () => { open = !open; render(open); }));
   render(false);
+})();
+
+// ── Project visuals: one-time entrance animation when scrolled into view ──
+(function () {
+  const vizzes = document.querySelectorAll('.viz');
+  if (!('IntersectionObserver' in window)) {
+    vizzes.forEach(v => v.classList.add('in-view'));
+    return;
+  }
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in-view');
+    io.unobserve(e.target);
+  }), { threshold: 0.35 });
+  vizzes.forEach(v => io.observe(v));
 })();

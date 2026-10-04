@@ -432,7 +432,23 @@ a.lang-opt:hover       { background: var(--surface-2); color: var(--text); }
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
-.mtile { padding: 20px; }
+.mtile { padding: 20px; display: flex; flex-direction: column; }
+.more-toggle {
+  margin-top: auto;
+  padding-top: 12px;
+  align-self: flex-start;
+  background: none;
+  border: 0;
+  font: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.more-toggle::after { content: " ↓"; font-size: 10px; }
+.more-toggle[aria-expanded="true"]::after { content: " ↑"; }
+.more-toggle:hover { text-decoration: underline; }
 .mtile h3 {
   font-size: 11px;
   font-weight: 700;
@@ -465,15 +481,6 @@ a.lang-opt:hover       { background: var(--surface-2); color: var(--text); }
   cursor: default;
 }
 .chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
-.chip-toggle {
-  font-family: inherit;
-  line-height: inherit;
-  cursor: pointer;
-  color: var(--accent);
-  background: var(--surface);
-  border-style: dashed;
-  font-weight: 600;
-}
 .chip.solid  { background: var(--accent-dim); border-color: transparent; color: var(--accent); font-weight: 600; }
 
 /* ── Read More ───────────────────────────────────────────────── */
@@ -667,6 +674,28 @@ details.read-more-wrap .full-text {
 .ch-line   { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
 .ch-dot    { fill: var(--accent); stroke: var(--surface-2); stroke-width: 2; }
 
+/* Entrance animations: play once when the visual scrolls into view (script.js adds .in-view).
+   Final state is the default, so no-JS, print and reduced-motion all see the complete visual. */
+@media (prefers-reduced-motion: no-preference) {
+  .js .viz .stg  { opacity: 0; }
+  .js .viz .draw { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .js .viz .pop  { opacity: 0; transform: scale(.3); transform-box: fill-box; transform-origin: center; }
+  .js .viz .grow { transform: scaleX(0); transform-box: fill-box; transform-origin: left center; }
+  .js .viz.in-view .stg  { animation: vizFade .5s ease-out var(--d, 0s) forwards; }
+  .js .viz.in-view .draw { animation: vizDraw 1.2s ease-in-out .1s forwards; }
+  .js .viz.in-view .pop  { animation: vizPop .28s ease-out calc(.12s + .075s * var(--i)) forwards; }
+  .js .viz.in-view .grow { animation: vizGrow .6s ease-out var(--d, 0s) forwards; }
+}
+@keyframes vizFade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@keyframes vizDraw { to { stroke-dashoffset: 0; } }
+@keyframes vizPop  { to { opacity: 1; transform: scale(1); } }
+@keyframes vizGrow { to { transform: scaleX(1); } }
+@media print {
+  .js .viz .stg, .js .viz .pop { opacity: 1 !important; transform: none !important; }
+  .js .viz .draw { stroke-dashoffset: 0 !important; }
+  .js .viz .grow { transform: none !important; }
+}
+
 /* Case-study body */
 .proj .p-body {
   padding: 20px 24px;
@@ -693,6 +722,17 @@ details.read-more-wrap .full-text {
 }
 .p-kpi b    { display: block; font-size: 17px; font-weight: 700; letter-spacing: -.02em; line-height: 1.2; }
 .p-kpi span { font-size: 11.5px; color: var(--muted); }
+.p-kpi .trend {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--good);
+  background: var(--good-dim);
+  border-radius: 5px;
+  padding: 0 4px;
+  margin-right: 6px;
+  vertical-align: 2px;
+}
 .p-pai { display: grid; gap: 7px; }
 .p-pai > div { display: grid; grid-template-columns: 78px 1fr; gap: 10px; }
 .p-pai dt {
