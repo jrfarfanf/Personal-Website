@@ -431,7 +431,6 @@ a.lang-opt:hover       { background: var(--surface-2); color: var(--text); }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  align-items: start;
 }
 .mtile { padding: 20px; }
 .mtile h3 {
@@ -522,7 +521,6 @@ details.read-more-wrap .full-text {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  align-items: start;   /* expanding one card never leaves blank space in its neighbor */
 }
 .exp {
   padding: 22px 24px;
@@ -590,7 +588,7 @@ details.read-more-wrap .full-text {
   padding: 0;
   overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(320px, 5fr) 7fr;
+  grid-template-columns: 7fr minmax(320px, 5fr);
   transition: .18s;
 }
 .proj:hover { box-shadow: var(--sh-md); transform: translateY(-2px); }
@@ -598,8 +596,9 @@ details.read-more-wrap .full-text {
 /* Visual panel */
 .proj .viz {
   margin: 0;
+  order: 2;
   background: var(--surface-2);
-  border-right: 1px solid var(--border);
+  border-left: 1px solid var(--border);
   padding: 14px 16px 12px;
   display: flex;
   flex-direction: column;
@@ -786,7 +785,7 @@ details.read-more-wrap .full-text {
   .kpi-row   { grid-template-columns: repeat(2, 1fr); }
   .matrix   { grid-template-columns: repeat(2, 1fr); }
   .proj     { grid-template-columns: 1fr; }
-  .proj .viz { border-right: none; border-bottom: 1px solid var(--border); }
+  .proj .viz { order: 0; border-left: none; border-bottom: 1px solid var(--border); }
   .exp-grid  { grid-template-columns: 1fr; }
   .exp.span2 { grid-column: auto; }
   .valuecard { grid-template-columns: 1fr; }

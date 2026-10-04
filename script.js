@@ -40,26 +40,27 @@ targets.forEach(sec => { if (sec) observer.observe(sec); });
 })();
 
 // ── Skills: first few chips per tile, the rest on demand ──────
-// Without JS every chip stays visible, so scrapers and no-JS readers see all skills.
+// One toggle state for the whole grid, so every tile opens and closes
+// together and the rows stay symmetric. Without JS every chip is shown.
 (function () {
   const es = document.documentElement.lang === 'es';
+  const groups = [];
   document.querySelectorAll('.chips[data-visible]').forEach(box => {
     const extra = Array.from(box.children).slice(Number(box.dataset.visible));
     if (extra.length < 2) return;
-    const more = es ? `+${extra.length} más` : `+${extra.length} more`;
-    const less = es ? 'Ver menos' : 'Show less';
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'chip chip-toggle';
-    btn.textContent = more;
-    btn.setAttribute('aria-expanded', 'false');
-    extra.forEach(c => { c.hidden = true; });
-    btn.addEventListener('click', () => {
-      const open = btn.getAttribute('aria-expanded') !== 'true';
-      extra.forEach(c => { c.hidden = !open; });
-      btn.setAttribute('aria-expanded', String(open));
-      btn.textContent = open ? less : more;
-    });
     box.appendChild(btn);
+    groups.push({ extra, btn });
   });
+  const render = open => groups.forEach(({ extra, btn }) => {
+    extra.forEach(c => { c.hidden = !open; });
+    btn.setAttribute('aria-expanded', String(open));
+    btn.textContent = open ? (es ? 'Ver menos' : 'Show less')
+                           : (es ? `+${extra.length} más` : `+${extra.length} more`);
+  });
+  let open = false;
+  groups.forEach(({ btn }) => btn.addEventListener('click', () => { open = !open; render(open); }));
+  render(false);
 })();
