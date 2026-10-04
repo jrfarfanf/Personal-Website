@@ -5,3 +5,9 @@
 # Design prototype is not part of the site
 /design_handoff_dashboard_portfolio/*   /404.html   404
 /Jose%20Farfan%20Personal%20Website/*   /404.html   404
+
+# Working docs live in the repo but are not part of the site
+/CONSISTENCY.md      /404.html   404!
+/RESUME-OUTLINE.md   /404.html   404!
+/AUDIT.md            /404.html   404!
+/METRICS.md          /404.html   404!
