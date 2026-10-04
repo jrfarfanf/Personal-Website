@@ -249,6 +249,12 @@ a:focus-visible, summary:focus-visible, .btn:focus-visible {
   letter-spacing: -.02em;
   margin-top: 5px;
 }
+.role-line {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-top: 3px;
+}
 .topbar .meta { display: flex; gap: 9px; flex-wrap: wrap; align-items: flex-end; }
 /* Mobile-only CV call-to-action — desktop uses the sidebar button instead */
 .topbar-cta { display: none; }
@@ -373,7 +379,7 @@ a.lang-opt:hover       { background: var(--surface-2); color: var(--text); }
   padding: 3px 8px;
   border-radius: 6px;
 }
-.s-head .s-note { font-size: 12px; color: var(--faint); }
+.s-head .s-note { font-size: 12px; color: var(--faint); text-align: right; }
 
 .card {
   background: var(--surface);
@@ -521,6 +527,33 @@ details.read-more-wrap .full-text {
 .e-chips .chip { font-size: 11px; padding: 3px 9px; }
 .exp.muted .e-co { color: var(--muted); }
 .exp.span2 { grid-column: span 2; }
+.e-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.e-list li {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+}
+.e-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .62em;
+  width: 5px; height: 5px;
+  border-radius: 2px;
+  background: var(--accent);
+  opacity: .7;
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+.site-foot {
+  font-size: 11.5px;
+  color: var(--faint);
+  text-align: center;
+  margin-top: 6px;
+}
+.site-foot a { color: var(--accent); font-weight: 600; }
+.site-foot a:hover { text-decoration: underline; }
 
 /* ── Projects ────────────────────────────────────────────────── */
 .proj-grid {
@@ -645,6 +678,7 @@ details.read-more-wrap .full-text {
   margin-top: 0;
   max-width: none;
 }
+.contact-card .contact-legal a:hover { color: var(--accent); }
 .contact-card .contact-legal {
   font-size: 11px;
   color: var(--faint);
@@ -697,8 +731,9 @@ details.read-more-wrap .full-text {
   .topbar-cta  { display: flex; width: 100%; margin-top: 2px; }
   .topbar-cta .btn { width: 100%; min-height: 46px; font-size: 14px; }
 
-  /* GitHub link dropped from the crumb on phones — CV is the priority here */
-  .crumb-gh { display: none; }
+  .role-line   { font-size: 13px; }
+  .valuecard   { padding: 24px 22px; }
+  .valuecard .vp { font-size: 19px; }
 
   /* Sticky CV dock — fades in once .topbar-cta scrolls out of view (script.js) */
   .cv-dock {
@@ -752,6 +787,12 @@ details.read-more-wrap .full-text {
   .contact-card { padding: 24px 20px; }
   /* Keep avatar for the personal touch, drop the name text — it's the H1 right below */
   .brand .b-name { display: none; }
+}
+
+/* ── Responsive — 400px (narrowest phones: 6 nav icons + avatar + LinkedIn) */
+@media (max-width: 400px) {
+  .sidebar { padding: 7px 10px; }
+  .nav a   { padding: 6px 5px; }
 }
 
 /* ── Reduced motion ──────────────────────────────────────────── */
