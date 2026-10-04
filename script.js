@@ -38,3 +38,28 @@ targets.forEach(sec => { if (sec) observer.observe(sec); });
 
   io.observe(cta);
 })();
+
+// ── Skills: first few chips per tile, the rest on demand ──────
+// Without JS every chip stays visible, so scrapers and no-JS readers see all skills.
+(function () {
+  const es = document.documentElement.lang === 'es';
+  document.querySelectorAll('.chips[data-visible]').forEach(box => {
+    const extra = Array.from(box.children).slice(Number(box.dataset.visible));
+    if (extra.length < 2) return;
+    const more = es ? `+${extra.length} más` : `+${extra.length} more`;
+    const less = es ? 'Ver menos' : 'Show less';
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'chip chip-toggle';
+    btn.textContent = more;
+    btn.setAttribute('aria-expanded', 'false');
+    extra.forEach(c => { c.hidden = true; });
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') !== 'true';
+      extra.forEach(c => { c.hidden = !open; });
+      btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? less : more;
+    });
+    box.appendChild(btn);
+  });
+})();

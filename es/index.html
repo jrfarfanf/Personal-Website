@@ -232,7 +232,7 @@
             Construyo los <b>modelos de Power BI y Fabric</b> con los que más de 500 personas gestionan el negocio,
             y lidero la <b>relación con stakeholders, la gobernanza y la calidad de datos</b> que los hacen confiables.
           </p>
-          <p class="vp-sub">Ingeniero mecánico convertido en líder de BI. Aprendí analítica en la planta, trabajando junto a más de 40 técnicos con datos de sensores, MTBF, OEE y Lean Six Sigma; por eso diseño productos de datos a partir de cómo funciona realmente la operación y lidero la gestión del cambio que asegura su adopción. Industrias: manufactura, consumo masivo, gestión de residuos y reciclaje, y consultoría fiscal, en el Reino Unido y Latinoamérica.</p>
+          <p class="vp-sub">Ingeniero mecánico convertido en líder de BI. Aprendí analítica en la planta, trabajando junto a más de 40 técnicos con datos de sensores, MTBF, OEE y Lean Six Sigma; por eso diseño productos de datos a partir de cómo funciona realmente la operación y lidero la gestión del cambio que asegura su adopción. Industrias: manufactura, consumo masivo y gestión de residuos y reciclaje, en el Reino Unido y Latinoamérica.</p>
         </div>
         <div class="spark" id="spark" aria-hidden="true"></div>
       </div>
@@ -250,39 +250,47 @@
 
         <article class="card proj">
           <figure class="viz">
-            <figcaption class="viz-head"><span class="vlabel">Modelo de datos</span><span class="viz-tag">Ilustrativo</span></figcaption>
+            <figcaption class="viz-head"><span class="vlabel">Flujo de datos</span><span class="viz-tag">Ilustrativo</span></figcaption>
             <div class="viz-art">
-              <svg viewBox="0 0 320 150" role="img" aria-labelledby="p1-t p1-d">
-              <title id="p1-t">Diagrama simplificado del modelo semántico</title><desc id="p1-d">Tres sistemas de origen (NetSuite, Dayforce y una base de datos de contratos) alimentan un modelo semántico en esquema de galaxia: dos tablas de hechos, ingresos y contratos, comparten cuatro dimensiones (cliente, fecha, servicio y empleado). El modelo sirve a una app de Power BI con más de 500 usuarios activos.</desc>
+              <svg viewBox="0 0 320 168" role="img" aria-labelledby="p1-t p1-d">
+              <title id="p1-t">Flujo de datos simplificado de Ventas y Finanzas</title><desc id="p1-d">NetSuite aporta datos de clientes y CRM, el sistema central aporta contratos, ingresos y servicios, y Dayforce aporta datos de empleados y RR. HH. a un único modelo semántico en esquema de galaxia, que sirve a Ventas, Finanzas y la dirección: más de 500 usuarios activos.</desc>
               <defs><marker id="p1-ah" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-ah"/></marker></defs>
-              <rect class="dg-box" x="4" y="21" width="74" height="24" rx="6"/><text class="dg-t" x="41" y="36.5" text-anchor="middle">NetSuite</text>
-              <line class="dg-arrow" x1="78" y1="33" x2="96" y2="33" marker-end="url(#p1-ah)"/>
-              <rect class="dg-box" x="4" y="63" width="74" height="24" rx="6"/><text class="dg-t" x="41" y="78.5" text-anchor="middle">Dayforce</text>
-              <line class="dg-arrow" x1="78" y1="75" x2="96" y2="75" marker-end="url(#p1-ah)"/>
-              <rect class="dg-box" x="4" y="105" width="74" height="24" rx="6"/><text class="dg-t" x="41" y="120.5" text-anchor="middle">BD contratos</text>
-              <line class="dg-arrow" x1="78" y1="117" x2="96" y2="117" marker-end="url(#p1-ah)"/>
-              <rect class="dg-model" x="98" y="6" width="134" height="138" rx="8"/>
-              <text class="dg-cap" x="165" y="19" text-anchor="middle">MODELO SEMÁNTICO</text>
-              <line class="dg-link" x1="134" y1="77" x2="134" y2="38"/>
-              <line class="dg-link" x1="134" y1="77" x2="198" y2="38"/>
-              <line class="dg-link" x1="134" y1="77" x2="134" y2="112"/>
-              <line class="dg-link" x1="134" y1="77" x2="198" y2="112"/>
-              <line class="dg-link" x1="198" y1="77" x2="134" y2="38"/>
-              <line class="dg-link" x1="198" y1="77" x2="198" y2="38"/>
-              <line class="dg-link" x1="198" y1="77" x2="134" y2="112"/>
-              <line class="dg-link" x1="198" y1="77" x2="198" y2="112"/>
-              <rect class="dg-dim" x="104" y="28" width="60" height="20" rx="5"/><text class="dg-t dg-t-m" x="134" y="41.5" text-anchor="middle">Cliente</text>
-              <rect class="dg-dim" x="168" y="28" width="60" height="20" rx="5"/><text class="dg-t dg-t-m" x="198" y="41.5" text-anchor="middle">Fecha</text>
-              <rect class="dg-dim" x="104" y="102" width="60" height="20" rx="5"/><text class="dg-t dg-t-m" x="134" y="115.5" text-anchor="middle">Servicio</text>
-              <rect class="dg-dim" x="168" y="102" width="60" height="20" rx="5"/><text class="dg-t dg-t-m" x="198" y="115.5" text-anchor="middle">Empleado</text>
-              <rect class="dg-fact" x="104" y="65" width="60" height="24" rx="5"/><text class="dg-t dg-fact-t" x="134" y="80.5" text-anchor="middle">Ingresos</text>
-              <rect class="dg-fact" x="168" y="65" width="60" height="24" rx="5"/><text class="dg-t dg-fact-t" x="198" y="80.5" text-anchor="middle">Contratos</text>
-              <text class="dg-cap" x="165" y="137" text-anchor="middle">ESQUEMA DE GALAXIA</text>
-              <line class="dg-arrow" x1="232" y1="75" x2="242" y2="75" marker-end="url(#p1-ah)"/>
-              <rect class="dg-out" x="244" y="40" width="72" height="70" rx="8"/>
-              <text class="dg-t dg-t-m" x="280" y="60" text-anchor="middle">Power BI</text>
-              <text class="dg-big" x="280" y="83" text-anchor="middle">500+</text>
-              <text class="dg-t dg-t-m" x="280" y="99" text-anchor="middle">usuarios</text>
+              <rect class="dg-model" x="110" y="8" width="118" height="154" rx="8"/>
+              <text class="dg-cap" x="169" y="21" text-anchor="middle">MODELO SEMÁNTICO</text>
+              <line class="dg-join" x1="169" y1="61" x2="169" y2="73"/><line class="dg-join" x1="169" y1="103" x2="169" y2="115"/>
+              <rect class="dg-box" x="4" y="29" width="86" height="34" rx="6"/>
+              <text class="dg-t dg-strong" x="47" y="44" text-anchor="middle">NetSuite</text>
+              <text class="dg-sub" x="47" y="56" text-anchor="middle">CRM</text>
+              <line class="dg-arrow" x1="90" y1="46" x2="106" y2="46" marker-end="url(#p1-ah)"/>
+              <rect class="dg-dim" x="118" y="31" width="102" height="30" rx="5"/>
+              <text class="dg-t dg-strong" x="169" y="44.5" text-anchor="middle">Clientes</text>
+              <text class="dg-sub" x="169" y="55.5" text-anchor="middle">Datos de CRM</text>
+              <rect class="dg-box" x="4" y="71" width="86" height="34" rx="6"/>
+              <text class="dg-t dg-strong" x="47" y="86" text-anchor="middle">Sistema central</text>
+              <text class="dg-sub" x="47" y="98" text-anchor="middle">Contratos</text>
+              <line class="dg-arrow" x1="90" y1="88" x2="106" y2="88" marker-end="url(#p1-ah)"/>
+              <rect class="dg-fact" x="118" y="73" width="102" height="30" rx="5"/>
+              <text class="dg-t dg-fact-t" x="169" y="86.5" text-anchor="middle">Contratos</text>
+              <text class="dg-sub dg-fact-s" x="169" y="97.5" text-anchor="middle">Ingresos · Servicios</text>
+              <rect class="dg-box" x="4" y="113" width="86" height="34" rx="6"/>
+              <text class="dg-t dg-strong" x="47" y="128" text-anchor="middle">Dayforce</text>
+              <text class="dg-sub" x="47" y="140" text-anchor="middle">RR. HH.</text>
+              <line class="dg-arrow" x1="90" y1="130" x2="106" y2="130" marker-end="url(#p1-ah)"/>
+              <rect class="dg-dim" x="118" y="115" width="102" height="30" rx="5"/>
+              <text class="dg-t dg-strong" x="169" y="128.5" text-anchor="middle">Empleados</text>
+              <text class="dg-sub" x="169" y="139.5" text-anchor="middle">Datos de RR. HH.</text>
+              <text class="dg-cap" x="169" y="157" text-anchor="middle">ESQUEMA DE GALAXIA</text>
+              <text class="dg-big" x="280" y="38" text-anchor="middle">500+</text>
+              <text class="dg-sub" x="280" y="52" text-anchor="middle">usuarios activos</text>
+              <line class="dg-arrow" x1="228" y1="80" x2="241" y2="80" marker-end="url(#p1-ah)"/>
+              <rect class="dg-out" x="244" y="69" width="72" height="22" rx="6"/>
+              <text class="dg-t dg-strong" x="280" y="83.5" text-anchor="middle">Ventas</text>
+              <line class="dg-arrow" x1="228" y1="108" x2="241" y2="108" marker-end="url(#p1-ah)"/>
+              <rect class="dg-out" x="244" y="97" width="72" height="22" rx="6"/>
+              <text class="dg-t dg-strong" x="280" y="111.5" text-anchor="middle">Finanzas</text>
+              <line class="dg-arrow" x1="228" y1="136" x2="241" y2="136" marker-end="url(#p1-ah)"/>
+              <rect class="dg-out" x="244" y="125" width="72" height="22" rx="6"/>
+              <text class="dg-t dg-strong" x="280" y="139.5" text-anchor="middle">Dirección</text>
               </svg>
             </div>
           </figure>
@@ -296,12 +304,16 @@
             </div>
             <dl class="p-pai">
               <div><dt>Problema</dt><dd>Ventas y Finanzas trabajaban con más de 5 procesos aislados en Excel (pipeline, proyección de ingresos, ingresos acumulados, churn y estado de contratos), con definiciones de ingresos que competían entre sí, incluidas las usadas para los bonos.</dd></div>
-              <div><dt>Enfoque</dt><dd>Un modelo semántico en esquema de galaxia sobre datos de NetSuite, Dayforce y contratos, con un único conjunto de definiciones de ingresos acordado, seguridad a nivel de fila y pipelines de implementación. Lo lideré desde los requerimientos hasta la adopción.</dd></div>
-              <div><dt>Impacto</dt><dd>Una única fuente de verdad para todas las regiones del Reino Unido, todos los canales de venta, Finanzas y la dirección; ~13 500 solicitudes manuales al año eliminadas (~US$52 mil); actualización reducida de 20 a 5 minutos con más datos. Nominado a los Diamond Awards de Biffa.</dd></div>
             </dl>
             <details class="read-more-wrap">
-              <summary>Arquitectura, método y detalles</summary>
-              <p class="full-text"><b>Método del ahorro:</b> ~13 500 solicitudes de reportes al año × 6 minutos cada una × US$39/hora de costo promedio de quienes las pedían y procesaban ≈ US$52 mil (£40 mil) al año. <b>Modelo:</b> las tablas de hechos de ingresos y contratos comparten dimensiones conformadas, para que Ventas y Finanzas analicen ambos en un solo modelo; una capa de medidas DAX cubre el ciclo de vida de contratos y el costo de servicio. El diagrama está simplificado y los nombres de tablas son genéricos.</p>
+              <summary>Enfoque e impacto</summary>
+              <div class="more-body">
+                <dl class="p-pai">
+                  <div><dt>Enfoque</dt><dd>Un modelo semántico en esquema de galaxia: hechos de contratos, ingresos y servicios del sistema central, datos de clientes y CRM de NetSuite y datos de RR. HH. de Dayforce, con un único conjunto de definiciones de ingresos acordado, seguridad a nivel de fila y pipelines de implementación. Lo lideré desde los requerimientos hasta la adopción.</dd></div>
+                  <div><dt>Impacto</dt><dd class="is-impact">Una única fuente de verdad para todas las regiones del Reino Unido, todos los canales de venta, Finanzas y la dirección; ~13 500 solicitudes manuales al año eliminadas (~US$52 mil); actualización reducida de 20 a 5 minutos con más datos. Nominado a los Diamond Awards de Biffa.</dd></div>
+                </dl>
+                <p class="full-text"><b>Método del ahorro:</b> ~13 500 solicitudes de reportes al año × 6 minutos cada una × US$39/hora de costo promedio de quienes las pedían y procesaban ≈ US$52 mil (£40 mil) al año. El diagrama está simplificado.</p>
+              </div>
             </details>
             <div class="p-chips">
               <span class="chip">Power BI</span>
@@ -316,20 +328,43 @@
 
         <article class="card proj">
           <figure class="viz">
-            <figcaption class="viz-head"><span class="vlabel">Selección guiada</span><span class="viz-tag">Ilustrativo</span></figcaption>
+            <figcaption class="viz-head"><span class="vlabel">Interfaz del reporte</span><span class="viz-tag">Ilustrativo</span></figcaption>
             <div class="viz-art">
-              <svg viewBox="0 0 320 150" role="img" aria-labelledby="p2-t p2-d">
-              <title id="p2-t">Embudo de selección de solicitudes de cambio</title><desc id="p2-d">La herramienta reduce más de 200 tipos de solicitudes de cambio paso a paso, por tipo de cambio, objeto de datos y mercado, hasta llegar a la única solicitud correcta.</desc>
-              <rect class="fn-bar" x="10" y="8" width="284" height="22" rx="4" fill-opacity="0.08"/>
-              <text class="dg-t" x="152" y="23" text-anchor="middle">Más de 200 tipos de CR</text>
-              <rect class="fn-bar" x="45" y="36" width="214" height="22" rx="4" fill-opacity="0.14"/>
-              <text class="dg-t" x="152" y="51" text-anchor="middle">por tipo de cambio</text>
-              <rect class="fn-bar" x="77" y="64" width="150" height="22" rx="4" fill-opacity="0.22"/>
-              <text class="dg-t" x="152" y="79" text-anchor="middle">por objeto de datos</text>
-              <rect class="fn-bar" x="104" y="92" width="96" height="22" rx="4" fill-opacity="0.32"/>
-              <text class="dg-t" x="152" y="107" text-anchor="middle">por mercado</text>
-              <rect class="fn-bar" x="132" y="120" width="40" height="22" rx="4" fill-opacity="1"/>
-              <text class="dg-t fn-end" x="180" y="135">La CR correcta</text>
+              <svg viewBox="0 0 320 172" role="img" aria-labelledby="p2-t p2-d">
+              <title id="p2-t">Recreación simplificada del reporte de selección de CR</title><desc id="p2-d">Tres segmentadores (tipo de cambio, objeto de datos y mercado) filtran una tabla de tipos de solicitudes de cambio. La mejor opción aparece resaltada y cada fila tiene un botón que abre el formulario para crear la solicitud.</desc>
+              <rect class="ui-frame" x="2" y="2" width="316" height="168" rx="8"/>
+              <text class="dg-t dg-strong" x="14" y="20">Encuentra la CR correcta</text>
+              <text class="dg-sub" x="306" y="20" text-anchor="end">200+ tipos de CR</text>
+              <rect class="ui-slicer" x="12" y="28" width="96" height="28" rx="5"/>
+              <text class="ui-cap" x="20" y="39">TIPO DE CAMBIO</text>
+              <text class="dg-t" x="20" y="51">Actualizar</text>
+              <polyline class="ui-chev" points="94,42 98,46 102,42"/>
+              <rect class="ui-slicer" x="112" y="28" width="96" height="28" rx="5"/>
+              <text class="ui-cap" x="120" y="39">OBJETO DE DATOS</text>
+              <text class="dg-t" x="120" y="51">Empaque</text>
+              <polyline class="ui-chev" points="194,42 198,46 202,42"/>
+              <rect class="ui-slicer" x="212" y="28" width="96" height="28" rx="5"/>
+              <text class="ui-cap" x="220" y="39">MERCADO</text>
+              <text class="dg-t" x="220" y="51">Europa</text>
+              <polyline class="ui-chev" points="294,42 298,46 302,42"/>
+              <text class="ui-cap" x="16" y="74">TIPO DE CR</text>
+              <text class="ui-cap" x="206" y="74">AJUSTE</text>
+              <text class="ui-cap" x="306" y="74" text-anchor="end">ENLACE</text>
+              <line class="ch-grid" x1="12" y1="79" x2="308" y2="79"/>
+              <rect class="ui-best" x="12" y="83" width="296" height="19" rx="3"/><rect class="dg-fact" x="12" y="83" width="3" height="19"/>
+              <text class="dg-t dg-strong" x="20" y="96">Especif. de empaque</text>
+              <rect class="dg-fact" x="140" y="87" width="63" height="12" rx="6"/><text class="ui-badge" x="171.5" y="95.5" text-anchor="middle">Mejor opción</text>
+              <rect class="fn-bar" x="206" y="89" width="56" height="7" rx="3.5" fill-opacity="1"/>
+              <rect class="ui-btn-on" x="266" y="85.5" width="42" height="14" rx="4"/><text class="ui-btn-t on" x="287" y="95.5" text-anchor="middle">Crear ↗</text>
+              <text class="dg-t" x="20" y="117">Especif. SKU completa</text>
+              <rect class="fn-bar" x="206" y="110" width="38" height="7" rx="3.5" fill-opacity="0.4"/>
+              <rect class="ui-btn" x="266" y="106.5" width="42" height="14" rx="4"/><text class="ui-btn-t" x="287" y="116.5" text-anchor="middle">Crear ↗</text>
+              <text class="dg-t" x="20" y="138">Cambio de material</text>
+              <rect class="fn-bar" x="206" y="131" width="26" height="7" rx="3.5" fill-opacity="0.3"/>
+              <rect class="ui-btn" x="266" y="127.5" width="42" height="14" rx="4"/><text class="ui-btn-t" x="287" y="137.5" text-anchor="middle">Crear ↗</text>
+              <text class="dg-t" x="20" y="159">Extensión a mercado</text>
+              <rect class="fn-bar" x="206" y="152" width="14" height="7" rx="3.5" fill-opacity="0.22"/>
+              <rect class="ui-btn" x="266" y="148.5" width="42" height="14" rx="4"/><text class="ui-btn-t" x="287" y="158.5" text-anchor="middle">Crear ↗</text>
               </svg>
             </div>
           </figure>
@@ -343,12 +378,16 @@
             </div>
             <dl class="p-pai">
               <div><dt>Problema</dt><dd>Los usuarios de operaciones en todo el mundo generaban más de 3 mil solicitudes de cambio de SKU al mes y debían encontrar el tipo correcto entre más de 200, lo que tomaba ~5 minutos por solicitud; los errores generaban retrabajo.</dd></div>
-              <div><dt>Enfoque</dt><dd>Una herramienta de selección guiada que reduce las opciones paso a paso (tipo de cambio, objeto de datos y mercado), basada en las reglas globales de datos maestros, con enlaces directos a SAP ECC/Fiori.</dd></div>
-              <div><dt>Impacto</dt><dd>Tiempo de selección reducido de ~5 a ~1 minuto (más de 200 horas ahorradas al mes) y ~10 % menos solicitudes incorrectas; más de 3 mil vistas al mes en cinco continentes.</dd></div>
             </dl>
             <details class="read-more-wrap">
-              <summary>Arquitectura, método y detalles</summary>
-              <p class="full-text"><b>Método de las horas:</b> más de 3 mil solicitudes al mes × ~4 minutos ahorrados cada una ≈ 200 horas al mes. Incorpora las reglas de gobernanza de datos maestros en un flujo sencillo, de modo que el estándar se cumple por diseño y no por revisión. Se complementa con dashboards de cumplimiento de SLA en Power BI para el equipo de ODM. Los pasos del embudo están simplificados.</p>
+              <summary>Enfoque e impacto</summary>
+              <div class="more-body">
+                <dl class="p-pai">
+                  <div><dt>Enfoque</dt><dd>Un reporte con segmentadores por tipo de cambio, objeto de datos y mercado que filtra más de 200 tipos de CR en una tabla, resalta la mejor opción y enlaza directamente al formulario para crearla, siguiendo las reglas globales de datos maestros.</dd></div>
+                  <div><dt>Impacto</dt><dd class="is-impact">Tiempo de selección reducido de ~5 a ~1 minuto (más de 200 horas ahorradas al mes) y ~10 % menos solicitudes incorrectas; más de 3 mil vistas al mes en cinco continentes.</dd></div>
+                </dl>
+                <p class="full-text"><b>Método de las horas:</b> más de 3 mil solicitudes al mes × ~4 minutos ahorrados cada una ≈ 200 horas al mes. Las reglas de gobernanza de datos maestros están en los filtros, de modo que el estándar se cumple por diseño y no por revisión. La interfaz mostrada es una recreación simplificada con valores de ejemplo.</p>
+              </div>
             </details>
             <div class="p-chips">
               <span class="chip">Datos maestros</span>
@@ -404,12 +443,16 @@
             </div>
             <dl class="p-pai">
               <div><dt>Problema</dt><dd>Paradas frecuentes en las empacadoras, el último paso de la línea, y ninguna vista compartida de las causas del tiempo de inactividad y el desperdicio en 12 líneas de producción.</dd></div>
-              <div><dt>Enfoque</dt><dd>Una suite de KPI en Power BI sobre datos de sensores de máquinas (paradas, MTBF, OEE y desperdicio), usada por más de 80 técnicos, personal administrativo y líderes de planta en sesiones de causa raíz con metodología Lean Six Sigma, junto a más de 40 técnicos de planta.</dd></div>
-              <div><dt>Impacto</dt><dd>El MTBF de las empacadoras pasó de menos de 10 a más de 60 minutos (6×); el OEE de la planta subió de ~65 % a ~71 % en el año, superando la meta del 70 %.</dd></div>
             </dl>
             <details class="read-more-wrap">
-              <summary>Arquitectura, método y detalles</summary>
-              <p class="full-text">Datos de sensores y paradas depurados y modelados con SQL y Power Query, cubriendo las 12 líneas de punta a punta, con el MTBF medido en las empacadoras como restricción final. El gráfico usa datos de ejemplo para mostrar la forma de la mejora.</p>
+              <summary>Enfoque e impacto</summary>
+              <div class="more-body">
+                <dl class="p-pai">
+                  <div><dt>Enfoque</dt><dd>Una suite de KPI en Power BI sobre datos de sensores de máquinas (paradas, MTBF, OEE y desperdicio), usada por más de 80 técnicos, personal administrativo y líderes de planta en sesiones de causa raíz con metodología Lean Six Sigma, junto a más de 40 técnicos de planta.</dd></div>
+                  <div><dt>Impacto</dt><dd class="is-impact">El MTBF de las empacadoras pasó de menos de 10 a más de 60 minutos (6×); el OEE de la planta subió de ~65 % a ~71 % en el año, superando la meta del 70 %.</dd></div>
+                </dl>
+                <p class="full-text">Datos de sensores y paradas depurados y modelados con SQL y Power Query, cubriendo las 12 líneas de punta a punta, con el MTBF medido en las empacadoras como restricción final. El gráfico usa datos de ejemplo para mostrar la forma de la mejora.</p>
+              </div>
             </details>
             <div class="p-chips">
               <span class="chip">Power BI</span>
@@ -443,10 +486,15 @@
           <ul class="e-list">
             <li>Lideré de punta a punta el <b>modelo semántico</b> empresarial de Ventas y Finanzas en Power BI: un esquema en galaxia sobre datos de NetSuite, Dayforce y contratos, hoy la única fuente de verdad para <b>más de 500 usuarios activos</b> en todas las regiones del Reino Unido, todos los canales de venta (campo, televentas y e-commerce), Finanzas y la dirección. Nominado a los Diamond Awards de Biffa por este trabajo.</li>
             <li>Reemplacé más de 5 procesos aislados en Excel (CRM de preventa, proyección de ingresos, ingresos acumulados, churn y controles de calidad de contratos), eliminando ~13 500 solicitudes manuales al año: <b>~US$52 mil (£40 mil) en horas de trabajo</b>.</li>
-            <li>Estandaricé las definiciones de ingresos (proyectados, acumulados y las variantes usadas para el cálculo de bonos) con los líderes de Ventas y Finanzas, para que los reportes y los bonos de ventas se calculen sobre una sola cifra acordada.</li>
-            <li>Implementé la <b>entrega por sprints en Azure DevOps</b> para el equipo de BI de 8 personas, llevando las solicitudes ad hoc a un backlog priorizado y visible.</li>
-            <li>Gestiono la gobernanza del modelo (seguridad a nivel de fila, pipelines de implementación y confiabilidad de las actualizaciones); reduje el tiempo de actualización de <b>20 a 5 minutos</b> con más datos.</li>
           </ul>
+          <details class="read-more-wrap">
+            <summary>Ver 3 más</summary>
+            <ul class="e-list more-body">
+              <li>Estandaricé las definiciones de ingresos (proyectados, acumulados y las variantes usadas para el cálculo de bonos) con los líderes de Ventas y Finanzas, para que los reportes y los bonos de ventas se calculen sobre una sola cifra acordada.</li>
+              <li>Implementé la <b>entrega por sprints en Azure DevOps</b> para el equipo de BI de 8 personas, llevando las solicitudes ad hoc a un backlog priorizado y visible.</li>
+              <li>Gestiono la gobernanza del modelo (seguridad a nivel de fila, pipelines de implementación y confiabilidad de las actualizaciones); reduje el tiempo de actualización de <b>20 a 5 minutos</b> con más datos.</li>
+            </ul>
+          </details>
           <div class="e-chips">
             <span class="chip">Power BI</span>
             <span class="chip">DAX</span>
@@ -465,12 +513,17 @@
           <h3 class="e-role" lang="en">Business Intelligence Executive</h3>
           <div class="e-loc">Gestión Global de Datos de Operaciones (ODM) · fabricante de consumo masivo</div>
           <ul class="e-list">
-            <li>Desarrollé <b>reportes de cumplimiento de SLA</b> en Power BI para el equipo global de ODM, cubriendo <b>más de 3 mil solicitudes de cambio de datos maestros de SKU al mes</b> en SAP ECC/Fiori, en cinco continentes.</li>
             <li>Diseñé una herramienta de selección de solicitudes de cambio (CR) que guía al usuario a la opción correcta entre más de 200 tipos, reduciendo el tiempo de selección de ~5 a ~1 minuto (<b>más de 200 horas ahorradas al mes</b>) y las solicitudes incorrectas en ~10 %.</li>
-            <li>Diseñé y apliqué marcos de SLA para los procesos globales de reportes, reduciendo la variabilidad en las entregas para equipos multifuncionales.</li>
-            <li>Contribuí a sostener la meta de <b>99 % de cumplimiento en calidad de datos maestros</b> mediante monitoreo y correcciones rápidas.</li>
-            <li>Preparé presentaciones ejecutivas basadas en datos para los líderes regionales y globales de Mejora Continua y Work Process Improvement (WPI).</li>
+            <li>Desarrollé <b>reportes de cumplimiento de SLA</b> en Power BI para el equipo global de ODM, cubriendo <b>más de 3 mil solicitudes de cambio de datos maestros de SKU al mes</b> en SAP ECC/Fiori, en cinco continentes.</li>
           </ul>
+          <details class="read-more-wrap">
+            <summary>Ver 3 más</summary>
+            <ul class="e-list more-body">
+              <li>Contribuí a sostener la meta de <b>99 % de cumplimiento en calidad de datos maestros</b> mediante monitoreo y correcciones rápidas.</li>
+              <li>Diseñé y apliqué marcos de SLA para los procesos globales de reportes, reduciendo la variabilidad en las entregas para equipos multifuncionales.</li>
+              <li>Preparé presentaciones ejecutivas basadas en datos para los líderes regionales y globales de Mejora Continua y Work Process Improvement (WPI).</li>
+            </ul>
+          </details>
           <div class="e-chips">
             <span class="chip">Power BI</span>
             <span class="chip">SAP ECC/Fiori</span>
@@ -488,11 +541,16 @@
           <h3 class="e-role" lang="en">Business Intelligence Engineer</h3>
           <div class="e-loc">Planta de manufactura · 12 líneas de producción</div>
           <ul class="e-list">
-            <li>Construí una suite de KPI de punta a punta en Power BI sobre datos de sensores de máquinas (paradas, MTBF, OEE y desperdicio) para <b>12 líneas de producción</b>, usada por más de 80 técnicos, personal administrativo y líderes de planta.</li>
             <li>Trabajé con mantenimiento en análisis de causa raíz con metodología Lean Six Sigma, elevando el <b>MTBF de las empacadoras de menos de 10 a más de 60 minutos (6×)</b> y el <b>OEE de la planta de ~65 % a ~71 %</b>, por encima de la meta del 70 %.</li>
-            <li>Automaticé la limpieza y transformación de datos con SQL y Power Query, reemplazando reportes manuales de producción.</li>
-            <li>Trabajé a diario con más de 40 técnicos de planta (supervisor directo de unos 20), integrando la suite de KPI en las rutinas de la planta.</li>
+            <li>Construí una suite de KPI de punta a punta en Power BI sobre datos de sensores de máquinas (paradas, MTBF, OEE y desperdicio) para <b>12 líneas de producción</b>, usada por más de 80 técnicos, personal administrativo y líderes de planta.</li>
           </ul>
+          <details class="read-more-wrap">
+            <summary>Ver 2 más</summary>
+            <ul class="e-list more-body">
+              <li>Automaticé la limpieza y transformación de datos con SQL y Power Query, reemplazando reportes manuales de producción.</li>
+              <li>Trabajé a diario con más de 40 técnicos de planta (supervisor directo de unos 20), integrando la suite de KPI en las rutinas de la planta.</li>
+            </ul>
+          </details>
           <div class="e-chips">
             <span class="chip">Power BI</span>
             <span class="chip">SQL</span>
@@ -511,9 +569,14 @@
           <div class="e-loc">Consultoría de BI · clientes de consultoría fiscal</div>
           <ul class="e-list">
             <li>Desarrollé soluciones de Power BI para más de 5 clientes importantes de consultoría fiscal: modelado financiero, reportes fiscales y transaccionales, con inteligencia de tiempo en DAX.</li>
-            <li>Administré Power BI Service en los entornos de los clientes: gobernanza de áreas de trabajo, implementación y control de accesos.</li>
-            <li>Convertí los requerimientos de los stakeholders en modelos de datos escalables, en coordinación con el equipo de MySQL para asegurar la integridad de los datos.</li>
           </ul>
+          <details class="read-more-wrap">
+            <summary>Ver 2 más</summary>
+            <ul class="e-list more-body">
+              <li>Administré Power BI Service en los entornos de los clientes: gobernanza de áreas de trabajo, implementación y control de accesos.</li>
+              <li>Convertí los requerimientos de los stakeholders en modelos de datos escalables, en coordinación con el equipo de MySQL para asegurar la integridad de los datos.</li>
+            </ul>
+          </details>
           <div class="e-chips">
             <span class="chip">Power BI</span>
             <span class="chip">DAX</span>
@@ -531,16 +594,22 @@
           <div class="e-job">
             <h3 class="e-role" lang="en">3D Printing Engineer</h3>
             <div class="e-meta">3D TECH · <time datetime="2017-03">mar. 2017</time> – <time datetime="2019-06">jun. 2019</time> · Caracas, Venezuela</div>
-            <ul class="e-list">
-              <li>Operé y mantuve las impresoras 3D del laboratorio, produciendo más de 6 modelos médicos al mes (principalmente maxilares) que los médicos usaban para planificar procedimientos y prótesis.</li>
-            </ul>
+            <details class="read-more-wrap">
+              <summary>Detalles</summary>
+              <ul class="e-list more-body">
+                <li>Operé y mantuve las impresoras 3D del laboratorio, produciendo más de 6 modelos médicos al mes (principalmente maxilares) que los médicos usaban para planificar procedimientos y prótesis.</li>
+              </ul>
+            </details>
           </div>
           <div class="e-job">
             <h3 class="e-role" lang="en">Junior Project Engineer</h3>
             <div class="e-meta">Venezuelan Heavy Industry CA (VHICOA) · <time datetime="2016-02">feb. 2016</time> – <time datetime="2017-02">feb. 2017</time> · Bolívar, Venezuela</div>
-            <ul class="e-list">
-              <li>Participé en 2 a 3 proyectos de recipientes a alta presión para la industria petrolera, cada uno de más de US$30 millones, bajo normas ASME, AWS y API: elaboré y revisé planos, coordiné ensayos no destructivos (END) y pruebas hidrostáticas, y di seguimiento en Excel a materiales, mano de obra y avance.</li>
-            </ul>
+            <details class="read-more-wrap">
+              <summary>Detalles</summary>
+              <ul class="e-list more-body">
+                <li>Participé en 2 a 3 proyectos de recipientes a alta presión para la industria petrolera, cada uno de más de US$30 millones, bajo normas ASME, AWS y API: elaboré y revisé planos, coordiné ensayos no destructivos (END) y pruebas hidrostáticas, y di seguimiento en Excel a materiales, mano de obra y avance.</li>
+              </ul>
+            </details>
           </div>
           <div class="e-chips">
             <span class="chip">Ingeniería mecánica</span>
@@ -563,7 +632,7 @@
 
         <div class="card mtile">
           <h3>BI y modelado semántico</h3>
-          <div class="chips">
+          <div class="chips" data-visible="4">
             <span class="chip solid">Power BI</span>
             <span class="chip solid">Microsoft Fabric</span>
             <span class="chip">DAX</span>
@@ -579,54 +648,54 @@
 
         <div class="card mtile">
           <h3>Ingeniería de datos</h3>
-          <div class="chips">
+          <div class="chips" data-visible="4">
             <span class="chip">T-SQL</span>
-            <span class="chip">MySQL</span>
             <span class="chip">Lakehouse y Warehouse en Fabric</span>
             <span class="chip">Dataflows Gen2</span>
             <span class="chip">Notebooks de PySpark</span>
+            <span class="chip">MySQL</span>
             <span class="chip">Pipelines ETL / ELT</span>
           </div>
         </div>
 
         <div class="card mtile">
           <h3>Liderazgo y gobernanza de datos</h3>
-          <div class="chips">
+          <div class="chips" data-visible="5">
             <span class="chip">Gestión de stakeholders</span>
-            <span class="chip">Levantamiento de requerimientos</span>
             <span class="chip">Gobernanza de datos</span>
             <span class="chip">Calidad de datos</span>
+            <span class="chip">Gestión del cambio</span>
+            <span class="chip solid">Bilingüe — inglés y español</span>
+            <span class="chip">Levantamiento de requerimientos</span>
             <span class="chip">Gestión de datos maestros (MDM)</span>
             <span class="chip">Definición y estandarización de KPI</span>
             <span class="chip">Capacitación y habilitación</span>
-            <span class="chip">Gestión del cambio</span>
             <span class="chip">Mentoría y coaching</span>
-            <span class="chip solid">Bilingüe — inglés y español</span>
           </div>
         </div>
 
         <div class="card mtile">
           <h3>Entrega y plataformas</h3>
-          <div class="chips">
+          <div class="chips" data-visible="4">
             <span class="chip">Azure DevOps (ADO)</span>
             <span class="chip">Agile / Scrum</span>
-            <span class="chip">Planificación de sprints</span>
-            <span class="chip">Gestión del backlog</span>
             <span class="chip">SAP ECC / Fiori</span>
             <span class="chip">NetSuite</span>
+            <span class="chip">Planificación de sprints</span>
+            <span class="chip">Gestión del backlog</span>
             <span class="chip">Dayforce</span>
           </div>
         </div>
 
         <div class="card mtile">
           <h3>Manufactura y métodos</h3>
-          <div class="chips">
+          <div class="chips" data-visible="4">
             <span class="chip">OEE</span>
             <span class="chip">MTBF</span>
             <span class="chip">Metodología Lean Six Sigma</span>
+            <span class="chip">Análisis de causa raíz</span>
             <span class="chip">Lean Manufacturing</span>
             <span class="chip">Eliminación de pérdidas</span>
-            <span class="chip">Análisis de causa raíz</span>
             <span class="chip">Control estadístico de procesos (CEP)</span>
             <span class="chip">Mejora continua</span>
             <span class="chip">Excel avanzado / Power Pivot</span>
@@ -635,7 +704,7 @@
 
         <div class="card mtile">
           <h3>IA y automatización</h3>
-          <div class="chips">
+          <div class="chips" data-visible="3">
             <span class="chip solid">Claude Code</span>
             <span class="chip solid">Servidores MCP</span>
             <span class="chip">Desarrollo asistido por IA</span>
@@ -672,11 +741,16 @@
           <ul class="e-list">
             <li><b>Nominado, Diamond Awards de Biffa</b> · reconocimiento a alto desempeño, por el modelo semántico de Ventas y Finanzas</li>
             <li><b>Premio Digital Learner</b> · British American Tobacco</li>
-            <li>Gestión de proyectos · Tecnología Financiera · 2016</li>
-            <li lang="en">Change Management Foundations · LinkedIn Learning</li>
-            <li lang="en">Having Difficult Conversations: A Guide for Managers · LinkedIn Learning</li>
-            <li lang="en">Decision-Making Strategies · Learning Power BI Desktop · MySQL Installation and Configuration · LinkedIn Learning</li>
           </ul>
+          <details class="read-more-wrap">
+            <summary>Ver 4 cursos</summary>
+            <ul class="e-list more-body">
+              <li>Gestión de proyectos · Tecnología Financiera · 2016</li>
+              <li lang="en">Change Management Foundations · LinkedIn Learning</li>
+              <li lang="en">Having Difficult Conversations: A Guide for Managers · LinkedIn Learning</li>
+              <li lang="en">Decision-Making Strategies · Learning Power BI Desktop · MySQL Installation and Configuration · LinkedIn Learning</li>
+            </ul>
+          </details>
         </article>
 
       </div>
