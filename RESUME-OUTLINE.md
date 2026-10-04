@@ -25,12 +25,12 @@ Authorized to work in the US — no sponsorship required
 ```
 
 ### SUMMARY
-Senior BI developer and data lead with 7+ years in Power BI and 10+ years across engineering and data. Led an enterprise Sales & Finance semantic model used by 500+ active users across every UK region, removing ~$52K a year in manual reporting. Mechanical engineer who managed 20+ factory technicians and raised packing-machine MTBF 6× using sensor data and Lean Six Sigma methods. Known for stakeholder alignment, data governance and the change management that drives adoption. Bilingual English/Spanish.
+Senior BI developer and data lead with 7+ years in Power BI and 10+ years across engineering and data. Led an enterprise Sales & Finance semantic model used by 500+ active users across every UK region, removing ~$52K a year in manual reporting. Mechanical engineer who raised packing-machine MTBF 6× and plant OEE from ~65% to ~71% using sensor data and Lean Six Sigma methods, working hands-on with factory teams. Known for stakeholder alignment, data governance and the change management that drives adoption. Bilingual English/Spanish.
 
 ### SKILLS
 - **BI & Modeling:** Power BI, DAX, Power Query (M), semantic models, star/galaxy schema, row-level security, deployment pipelines, KPI design, data storytelling
 - **Data Engineering:** T-SQL, MySQL, Microsoft Fabric (Lakehouse, Warehouse, Dataflows Gen2, PySpark notebooks), ETL/ELT
-- **Leadership & Governance:** stakeholder management, requirements gathering, data governance, data quality, master data management, KPI standardization, change management, team leadership, mentoring
+- **Leadership & Governance:** stakeholder management, requirements gathering, data governance, data quality, master data management, KPI standardization, change management, mentoring, coaching
 - **Delivery & Platforms:** Azure DevOps, Agile/Scrum, sprint planning, backlog management, SAP ECC/Fiori, NetSuite, Dayforce
 - **Manufacturing & Methods:** OEE, MTBF, Lean Six Sigma methods, Lean manufacturing, root cause analysis, SPC, Excel/Power Pivot
 - **Languages:** English (fluent), Spanish (native)
@@ -45,7 +45,7 @@ Biffa — London, United Kingdom (Hybrid)
 - Standardized revenue definitions, including the variants used for bonus calculations, with Sales and Finance leadership, so reporting and sales bonuses run on one agreed number.
 - Introduced Azure DevOps sprint delivery for the 8-person BI team, moving ad-hoc requests into a prioritized, visible backlog.
 - Own model governance (row-level security, deployment pipelines, refresh reliability); cut refresh time from 20 to 5 minutes while covering more data.
-- Nominated for Biffa's Diamonds high-performer award for the Sales & Finance model.
+- Nominated for Biffa's Diamond Awards (high-performer recognition) for the Sales & Finance model.
 
 **Business Intelligence Executive**
 British American Tobacco (BAT) — Southampton, United Kingdom
@@ -59,10 +59,10 @@ British American Tobacco (BAT) — Southampton, United Kingdom
 **Business Intelligence Engineer**
 British American Tobacco (BAT) — Caracas, Venezuela
 06/2021 – 12/2022
-- Managed 20+ factory technicians as direct reports, building data-led routines into daily shop-floor work.
 - Built an end-to-end Power BI KPI suite on machine sensor data (stops, MTBF, OEE, waste) for 12 production lines, used by 80+ technicians, admin staff and factory leaders.
 - Partnered with maintenance on root-cause analysis using Lean Six Sigma methods, raising packing-machine MTBF from under 10 to 60+ minutes (6×) and plant OEE from ~65% to ~71%, beating the 70% target.
 - Automated data cleansing and transformation in SQL and Power Query, replacing manual production reports.
+- Worked day to day with 40+ factory technicians (line manager for about 20), embedding the KPI suite into shop-floor routines.
 
 **Business Intelligence Developer**
 ASIS Consulting — Caracas, Venezuela
@@ -87,7 +87,7 @@ Universidad Metropolitana — Caracas, Venezuela
 2015
 
 ### AWARDS & TRAINING
-- Nominee, Diamonds Award (high-performer recognition), Biffa
+- Nominee, Diamond Awards (high-performer recognition), Biffa
 - Digital Learner Award, British American Tobacco
 - Project Management, Tecnología Financiera, 2016
 - LinkedIn Learning: Change Management Foundations; Having Difficult Conversations: A Guide for Managers

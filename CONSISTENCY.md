@@ -68,7 +68,7 @@ Use only these, phrased the same way everywhere. Methods are in RESUME-OUTLINE.m
 | CR volume (BAT) | 3,000+ change requests a month, across five continents |
 | CR tool (BAT) | 200+ CR types; ~5 → ~1 minute per request; 200+ hours saved a month; ~10% fewer incorrect requests; 3K+ views a month |
 | Data quality (BAT) | helped sustain the 99% master-data quality compliance target |
-| People (BAT plant) | 20+ factory technicians as direct reports |
+| People (BAT plant) | worked day to day with 40+ factory technicians, line manager for about 20. **Mention only inside the BAT Engineer role**, never in a headline, summary or KPI. |
 | Plant scope (BAT) | 12 production lines; 80+ users |
 | MTBF (BAT plant) | packing-machine MTBF from under 10 to 60+ minutes (**6×**; never "600%") |
 | OEE (BAT plant) | ~65% → ~71% over the year (target 70%) |
@@ -76,7 +76,7 @@ Use only these, phrased the same way everywhere. Methods are in RESUME-OUTLINE.m
 | 3D TECH | 6+ medical models a month (mainly jaw models) |
 | VHICOA | 2–3 vessel projects, each $30M+ |
 | Mentoring | 5+ team members mentored |
-| Awards | Nominee, Diamonds Award (Biffa) · Digital Learner Award (BAT) |
+| Awards | Nominee, Biffa Diamond Awards · Digital Learner Award (BAT) |
 
 **Not to be used:** "12+ countries" (not confirmed; say "five continents" or "global"), and any claim that the CR tool reduced SLA breaches.
 
@@ -84,7 +84,7 @@ Use only these, phrased the same way everywhere. Methods are in RESUME-OUTLINE.m
 
 **Power BI · DAX · Microsoft Fabric.** Pin these as LinkedIn Top Skills, list them first in the résumé Skills section, and show them as solid chips on the site.
 
-Full list (all confirmed true): Power BI, DAX, Power Query (M), T-SQL, MySQL, Microsoft Fabric (Lakehouse, Warehouse, Dataflows Gen2, PySpark notebooks), semantic models, star / galaxy schema, row-level security, deployment pipelines, data governance, data quality, master data management, KPI definition, stakeholder management, change management, team leadership, mentoring, requirements gathering, Azure DevOps, Agile / Scrum, SAP ECC / Fiori, NetSuite, Dayforce, OEE, MTBF, Lean Six Sigma methods, SPC, root cause analysis, Excel / Power Pivot, Claude Code.
+Full list (all confirmed true): Power BI, DAX, Power Query (M), T-SQL, MySQL, Microsoft Fabric (Lakehouse, Warehouse, Dataflows Gen2, PySpark notebooks), semantic models, star / galaxy schema, row-level security, deployment pipelines, data governance, data quality, master data management, KPI definition, stakeholder management, change management, mentoring, coaching, requirements gathering, Azure DevOps, Agile / Scrum, SAP ECC / Fiori, NetSuite, Dayforce, OEE, MTBF, Lean Six Sigma methods, SPC, root cause analysis, Excel / Power Pivot, Claude Code.
 
 **Not** to be listed: Azure Synapse.
 
@@ -105,7 +105,7 @@ Do these with **LinkedIn's display language set to English** (Settings → Accou
 - [ ] **Languages**: delete and re-add as *English — Full professional proficiency* and *Spanish — Native or bilingual* (currently "Inglés (Professional Working)").
 - [ ] **Top skills**: pin Power BI, DAX, Microsoft Fabric (currently Scrum, KPI Dashboards, Lean Methodologies).
 - [ ] **Certifications → Courses**: move the five LinkedIn Learning items to *Courses*. They are courses, and listing them as certifications invites questions.
-- [ ] **Honors & awards** (new section): *Digital Learner Award, British American Tobacco* and *Nominee, Diamonds Award, Biffa*. Add the Diamonds nomination to the Biffa role description too.
+- [ ] **Honors & awards** (new section): *Digital Learner Award, British American Tobacco* and *Nominee, Diamond Awards, Biffa*. Add the Diamond Awards nomination to the Biffa role description too.
 - [ ] **Experience descriptions**: paste the bullets from RESUME-OUTLINE.md so LinkedIn, the résumé and the site carry the same numbers.
 - [ ] **Featured**: add josefarfan.com and the résumé PDF link (https://josefarfan.com/assets/Jose-Farfan-Resume.pdf).
 - [ ] **Contact info**: phone (623) 260-1171, website https://josefarfan.com.
