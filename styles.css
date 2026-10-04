@@ -6,7 +6,7 @@
   --border:     #E7E9EE;
   --text:       #15181E;
   --muted:      #5C6470;
-  --faint:      #8A93A0;
+  --faint:      #697180;   /* 4.6–4.9:1 on all surfaces (WCAG AA) */
   --accent:     #7A1228;
   --accent-2:   #9B2335;
   --accent-dim: rgba(122, 18, 40, .07);
@@ -31,7 +31,35 @@ body {
   overflow-x: clip;
 }
 a { color: inherit; text-decoration: none; }
-.mono { font-family: 'JetBrains Mono', monospace; }
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+a:focus-visible, summary:focus-visible, .btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 100;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 14px;
+  border-radius: var(--r-sm);
+  transition: top .16s;
+}
+.skip-link:focus { top: 12px; }
+.main:focus { outline: none; }   /* skip-link target, not a control */
 
 /* ── App Shell ───────────────────────────────────────────────── */
 .app {
@@ -101,7 +129,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .spons-note {
-  font-size: 10.5px;
+  font-size: 11px;
   color: var(--good);
   font-weight: 600;
   padding: 0 0 6px;
@@ -115,7 +143,7 @@ a { color: inherit; text-decoration: none; }
   margin-top: 18px;
 }
 .nav-label {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -154,13 +182,6 @@ a { color: inherit; text-decoration: none; }
   font-size: 13px;
 }
 .btn svg { flex-shrink: 0; }
-.built-note {
-  font-size: 10px;
-  color: var(--faint);
-  text-align: center;
-  line-height: 1.5;
-  margin-top: 2px;
-}
 
 /* ── Buttons ─────────────────────────────────────────────────── */
 .btn {
@@ -256,6 +277,7 @@ a { color: inherit; text-decoration: none; }
   white-space: nowrap;
 }
 .lang-opt + .lang-opt  { border-left: 1px solid var(--border); }
+.lang-opt:focus-visible { outline-offset: -3px; border-radius: 100px; }
 .lang-opt.lang-active  { background: var(--accent); color: #fff; font-weight: 600; }
 a.lang-opt:hover       { background: var(--surface-2); color: var(--text); }
 .lang-wrap {
@@ -265,7 +287,7 @@ a.lang-opt:hover       { background: var(--surface-2); color: var(--text); }
   gap: 4px;
 }
 .lang-hint {
-  font-size: 9.5px;
+  font-size: 10.5px;
   color: var(--faint);
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -334,7 +356,7 @@ a.lang-opt:hover       { background: var(--surface-2); color: var(--text); }
   gap: 9px;
 }
 .s-head h2 .tag {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: .1em;
   color: var(--accent);
@@ -503,7 +525,6 @@ details.read-more-wrap .full-text {
   display: flex;
   flex-direction: column;
   transition: .18s;
-  cursor: pointer;
 }
 .proj:hover { box-shadow: var(--sh-md); transform: translateY(-3px); }
 
@@ -528,7 +549,7 @@ details.read-more-wrap .full-text {
   position: absolute;
   top: 11px;
   left: 14px;
-  font-size: 9.5px;
+  font-size: 11px;
   letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--faint);
@@ -549,7 +570,7 @@ details.read-more-wrap .full-text {
   flex: 1;
 }
 .proj .p-co {
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -558,7 +579,7 @@ details.read-more-wrap .full-text {
 .proj .p-title  { font-size: 15px; font-weight: 700; letter-spacing: -.01em; line-height: 1.3; }
 .proj .p-desc   { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
 .proj .p-chips  { display: flex; flex-wrap: wrap; gap: 5px; }
-.proj .p-chips .chip { font-size: 10.5px; padding: 3px 8px; }
+.proj .p-chips .chip { font-size: 11px; padding: 3px 8px; }
 .proj .p-impact {
   margin-top: auto;
   font-size: 12px;
@@ -693,7 +714,7 @@ details.read-more-wrap .full-text {
   /* Room so the dock never covers the last line of content */
   .main { padding-bottom: 96px; }
   .e-top       { flex-wrap: wrap; gap: 3px; }
-  .e-when      { white-space: normal; font-size: 10.5px; }
+  .e-when      { white-space: normal; font-size: 11px; }
   .contact-top { flex-direction: column; align-items: flex-start; }
   .c-right     { align-items: flex-start; width: 100%; }
   .contact-card .c-actions { flex-direction: column; width: 100%; }
@@ -708,7 +729,7 @@ details.read-more-wrap .full-text {
   .status            { display: none; }
   .nav               { order: 2; flex: 1; flex-wrap: nowrap; justify-content: space-around; margin: 0; gap: 0; }
   .nav a             { flex: 0 1 auto; justify-content: center; min-height: 38px; padding: 6px 8px; }
-  .nav a span        { display: none; }
+  .nav a span        { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .side-foot         { order: 3; flex: 0 0 auto; margin: 0; }
   .side-foot .btn:not(:first-child) { display: none; }
   .side-foot .btn    { min-height: 32px; padding: 5px 11px; font-size: 12px; }
@@ -726,5 +747,8 @@ details.read-more-wrap .full-text {
 
 /* ── Reduced motion ──────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   .cv-dock { transition: none; }
+  .exp:hover, .proj:hover, .btn-primary:hover { transform: none; }
+  details.read-more-wrap .full-text { animation: none; }
 }

@@ -42,7 +42,7 @@ targets.forEach(sec => { if (sec) observer.observe(sec); });
   const io = new IntersectionObserver(([entry]) => {
     const hidden = !entry.isIntersecting;
     dock.classList.toggle('show', hidden);
-    dock.setAttribute('aria-hidden', hidden ? 'false' : 'true');
+    dock.inert = !hidden;   // keep the hidden dock out of the tab order
   }, { threshold: 0 });
 
   io.observe(cta);

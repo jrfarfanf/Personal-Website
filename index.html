@@ -130,6 +130,7 @@
   </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="app">
 
   <!-- ── Sidebar ──────────────────────────────────────────────── -->
@@ -148,7 +149,7 @@
     </div>
     <div class="spons-note">Authorized to work in the US and UK — no sponsorship required</div>
 
-    <nav class="nav" id="nav">
+    <nav class="nav" id="nav" aria-label="Page sections">
       <div class="nav-label">Workspace</div>
       <a href="#overview" class="active"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Overview</span></a>
       <a href="#projects"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span>Projects</span></a>
@@ -165,7 +166,7 @@
   </aside>
 
   <!-- ── Main ─────────────────────────────────────────────────── -->
-  <main class="main">
+  <main class="main" id="main" tabindex="-1">
 
     <!-- Overview -->
     <section id="overview">
@@ -225,7 +226,7 @@
           </div>
           <div class="vp-sub">Mechanical Engineer turned BI leader · I learned analytics on the plant floor — MTBF, OEE and machine sensor data under Lean Six Sigma — and bring that manufacturing lens to enterprise BI, turning physical realities into measurable strategies.</div>
         </div>
-        <div class="spark" id="spark"></div>
+        <div class="spark" id="spark" aria-hidden="true"></div>
       </div>
     </section>
 
@@ -545,7 +546,7 @@
   </main>
 </div>
 
-<div class="cv-dock" id="cvDock" aria-hidden="true">
+<div class="cv-dock" id="cvDock" inert>
   <a href="assets/Jose-Farfan-CV.pdf" download class="btn btn-primary"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download CV (PDF)</a>
 </div>
 <script src="script.js"></script>
