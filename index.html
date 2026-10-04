@@ -244,91 +244,180 @@
       <div class="proj-grid">
 
         <article class="card proj">
-          <div class="viz bars">
-            <span class="vlabel">Contract performance</span>
-          </div>
+          <figure class="viz">
+            <figcaption class="viz-head"><span class="vlabel">Data model</span><span class="viz-tag">Illustrative</span></figcaption>
+            <div class="viz-art">
+              <svg viewBox="0 0 320 150" role="img" aria-labelledby="p1-t p1-d">
+              <title id="p1-t">Simplified semantic model diagram</title><desc id="p1-d">Three source systems (NetSuite, Dayforce, a contracts database) feed a galaxy-schema semantic model: two fact tables, revenue and contracts, share four dimensions (customer, date, service, employee). The model serves a Power BI app used by 500+ people.</desc>
+              <defs><marker id="p1-ah" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-ah"/></marker></defs>
+              <rect class="dg-box" x="4" y="21" width="74" height="24" rx="6"/><text class="dg-t" x="41" y="36.5" text-anchor="middle">NetSuite</text>
+              <line class="dg-arrow" x1="78" y1="33" x2="96" y2="33" marker-end="url(#p1-ah)"/>
+              <rect class="dg-box" x="4" y="63" width="74" height="24" rx="6"/><text class="dg-t" x="41" y="78.5" text-anchor="middle">Dayforce</text>
+              <line class="dg-arrow" x1="78" y1="75" x2="96" y2="75" marker-end="url(#p1-ah)"/>
+              <rect class="dg-box" x="4" y="105" width="74" height="24" rx="6"/><text class="dg-t" x="41" y="120.5" text-anchor="middle">Contracts DB</text>
+              <line class="dg-arrow" x1="78" y1="117" x2="96" y2="117" marker-end="url(#p1-ah)"/>
+              <rect class="dg-model" x="98" y="6" width="134" height="138" rx="8"/>
+              <text class="dg-cap" x="165" y="19" text-anchor="middle">SEMANTIC MODEL</text>
+              <line class="dg-link" x1="134" y1="77" x2="134" y2="38"/>
+              <line class="dg-link" x1="134" y1="77" x2="198" y2="38"/>
+              <line class="dg-link" x1="134" y1="77" x2="134" y2="112"/>
+              <line class="dg-link" x1="134" y1="77" x2="198" y2="112"/>
+              <line class="dg-link" x1="198" y1="77" x2="134" y2="38"/>
+              <line class="dg-link" x1="198" y1="77" x2="198" y2="38"/>
+              <line class="dg-link" x1="198" y1="77" x2="134" y2="112"/>
+              <line class="dg-link" x1="198" y1="77" x2="198" y2="112"/>
+              <rect class="dg-dim" x="104" y="28" width="60" height="20" rx="5"/><text class="dg-t dg-t-m" x="134" y="41.5" text-anchor="middle">Customer</text>
+              <rect class="dg-dim" x="168" y="28" width="60" height="20" rx="5"/><text class="dg-t dg-t-m" x="198" y="41.5" text-anchor="middle">Date</text>
+              <rect class="dg-dim" x="104" y="102" width="60" height="20" rx="5"/><text class="dg-t dg-t-m" x="134" y="115.5" text-anchor="middle">Service</text>
+              <rect class="dg-dim" x="168" y="102" width="60" height="20" rx="5"/><text class="dg-t dg-t-m" x="198" y="115.5" text-anchor="middle">Employee</text>
+              <rect class="dg-fact" x="104" y="65" width="60" height="24" rx="5"/><text class="dg-t dg-fact-t" x="134" y="80.5" text-anchor="middle">Revenue</text>
+              <rect class="dg-fact" x="168" y="65" width="60" height="24" rx="5"/><text class="dg-t dg-fact-t" x="198" y="80.5" text-anchor="middle">Contracts</text>
+              <text class="dg-cap" x="165" y="137" text-anchor="middle">GALAXY SCHEMA</text>
+              <line class="dg-arrow" x1="232" y1="75" x2="242" y2="75" marker-end="url(#p1-ah)"/>
+              <rect class="dg-out" x="244" y="40" width="72" height="70" rx="8"/>
+              <text class="dg-t dg-t-m" x="280" y="60" text-anchor="middle">Power BI</text>
+              <text class="dg-big" x="280" y="83" text-anchor="middle">500+</text>
+              <text class="dg-t dg-t-m" x="280" y="99" text-anchor="middle">users</text>
+              </svg>
+            </div>
+          </figure>
           <div class="p-body">
-            <div class="p-co">Biffa · 2025–2026</div>
-            <div class="p-title">Enterprise Sales Model</div>
-            <div class="p-desc">Constellation data model consolidating Dayforce (HR), NetSuite (CRM), and contract systems into a single source of truth — serving 500+ users with full visibility over revenue, pipeline, and service metrics.</div>
+            <div class="p-co">Biffa · 2025 – Present</div>
+            <h3 class="p-title">Enterprise Sales &amp; Finance Semantic Model</h3>
+            <div class="p-kpis">
+              <div class="p-kpi"><b>500+</b><span>users</span></div>
+              <div class="p-kpi"><b>3</b><span>source systems</span></div>
+              <div class="p-kpi"><b>~$52K</b><span>saved per year</span></div>
+            </div>
+            <dl class="p-pai">
+              <div><dt>Problem</dt><dd>Sales and Finance reported from disconnected systems and spreadsheets, with conflicting KPI definitions.</dd></div>
+              <div><dt>Approach</dt><dd>A galaxy-schema semantic model over NetSuite, Dayforce and contract data, with standardized KPIs, row-level security and deployment pipelines.</dd></div>
+              <div><dt>Impact</dt><dd>One source of truth for revenue, pipeline and service metrics, used by 500+ people; ~$52K (£40K) a year of manual reporting removed.</dd></div>
+            </dl>
             <details class="read-more-wrap">
-              <summary>Read more</summary>
-              <p class="full-text">Engineered a robust constellation data model consolidating Dayforce (HR), NetSuite (CRM), and central contract systems into a single source of truth. Currently serving 500+ users, this architecture provides complete visibility over revenue, pipeline volume, and service metrics while eliminating ad-hoc reporting silos and enabling data-driven commercial decisions across the organization.</p>
+              <summary>Architecture &amp; details</summary>
+              <p class="full-text">Revenue and contract fact tables share conformed dimensions, so Sales and Finance can analyze both in one model. Built in Power BI with a DAX measure layer for contract lifecycle and cost-to-serve, row-level security, and deployment pipelines for controlled releases. The diagram is simplified and table names are generic.</p>
             </details>
             <div class="p-chips">
               <span class="chip">Power BI</span>
-              <span class="chip">Constellation Model</span>
-              <span class="chip">NetSuite CRM</span>
               <span class="chip">DAX</span>
-            </div>
-            <div class="p-impact">
-              <span class="ar">↑</span> Serving <span class="est">500+<sup>est</sup></span> users · saving <span class="est">£40K+<sup>est</sup></span> (≈$52K) in labor per year
+              <span class="chip">Galaxy Schema</span>
+              <span class="chip">NetSuite</span>
+              <span class="chip">Dayforce</span>
+              <span class="chip">RLS</span>
             </div>
           </div>
         </article>
 
         <article class="card proj">
-          <div class="viz line">
-            <span class="vlabel">SLA breaches ↓</span>
-            <svg viewBox="0 0 300 118" preserveAspectRatio="none">
-              <polyline points="0,28 50,40 100,34 150,62 200,74 250,92 300,102"
-                        fill="none" stroke="#7A1228" stroke-width="3"/>
-              <polyline points="0,28 50,40 100,34 150,62 200,74 250,92 300,102 300,118 0,118"
-                        fill="rgba(122,18,40,.07)" stroke="none"/>
-            </svg>
-          </div>
+          <figure class="viz">
+            <figcaption class="viz-head"><span class="vlabel">Guided selection</span><span class="viz-tag">Illustrative</span></figcaption>
+            <div class="viz-art">
+              <svg viewBox="0 0 320 150" role="img" aria-labelledby="p2-t p2-d">
+              <title id="p2-t">Change request selection funnel</title><desc id="p2-d">The tool narrows hundreds of change request types step by step, by change type, data object and market, down to the one correct request.</desc>
+              <rect class="fn-bar" x="10" y="8" width="284" height="22" rx="4" fill-opacity="0.08"/>
+              <text class="dg-t" x="152" y="23" text-anchor="middle">Hundreds of CR types</text>
+              <rect class="fn-bar" x="45" y="36" width="214" height="22" rx="4" fill-opacity="0.14"/>
+              <text class="dg-t" x="152" y="51" text-anchor="middle">by change type</text>
+              <rect class="fn-bar" x="77" y="64" width="150" height="22" rx="4" fill-opacity="0.22"/>
+              <text class="dg-t" x="152" y="79" text-anchor="middle">by data object</text>
+              <rect class="fn-bar" x="104" y="92" width="96" height="22" rx="4" fill-opacity="0.32"/>
+              <text class="dg-t" x="152" y="107" text-anchor="middle">by market</text>
+              <rect class="fn-bar" x="132" y="120" width="40" height="22" rx="4" fill-opacity="1"/>
+              <text class="dg-t fn-end" x="180" y="135">The right CR</text>
+              </svg>
+            </div>
+          </figure>
           <div class="p-body">
-            <div class="p-co">BAT · 2022–2025</div>
-            <div class="p-title">CR Selection Tool</div>
-            <div class="p-desc">Dynamic CR selection tool guiding global Operations users to the correct Change Requests for SKU data changes — bridging a seamless UX with strict master data governance and SLA frameworks.</div>
+            <div class="p-co">BAT · 2022 – 2025</div>
+            <h3 class="p-title">Change Request Selection Tool</h3>
+            <div class="p-kpis">
+              <div class="p-kpi"><b>12+</b><span>countries</span></div>
+              <div class="p-kpi"><b>200+ hrs</b><span>saved per month</span></div>
+              <div class="p-kpi"><b>3K+</b><span>views per month</span></div>
+            </div>
+            <dl class="p-pai">
+              <div><dt>Problem</dt><dd>Operations users in 12+ markets had to pick the right SKU change request from hundreds of CR types; wrong picks caused rework and SLA breaches.</dd></div>
+              <div><dt>Approach</dt><dd>A guided selection tool that narrows the options step by step (change type, data object, market), built on global master-data rules in SAP ECC/Fiori.</dd></div>
+              <div><dt>Impact</dt><dd>Fewer incorrect requests and an estimated 200+ hours saved every month across the global team.</dd></div>
+            </dl>
             <details class="read-more-wrap">
-              <summary>Read more</summary>
-              <p class="full-text">Designed a dynamic Change Request (CR) selection tool for the global Operations team. This solution intelligently guides users to the correct CRs available to support data changes for SKU and specifications, bridging the gap between a seamless user experience and strict adherence to global master data standards and SLA frameworks. The tool handles hundreds of unique CR types and significantly reduced user error rates across 12+ countries.</p>
+              <summary>Architecture &amp; details</summary>
+              <p class="full-text">Encodes master-data governance rules into an easy flow, so the standard is enforced by design rather than by review. Paired with Power BI SLA-compliance dashboards for the ODM team. The funnel steps shown are simplified.</p>
             </details>
             <div class="p-chips">
               <span class="chip">Master Data</span>
               <span class="chip">SAP ECC/Fiori</span>
               <span class="chip">Data Governance</span>
-            </div>
-            <div class="p-impact">
-              <span class="ar">↑</span> <span class="est">3K+ views/month<sup>est</sup></span> · <span class="est">200+ hrs saved/month<sup>est</sup></span>
+              <span class="chip">UX for Data</span>
             </div>
           </div>
         </article>
 
         <article class="card proj">
-          <div class="viz donut">
-            <span class="vlabel">MTBF uplift</span>
-            <svg width="84" height="84" viewBox="0 0 42 42">
-              <circle cx="21" cy="21" r="15.9" fill="none" stroke="#E7E9EE" stroke-width="6"/>
-              <circle cx="21" cy="21" r="15.9" fill="none" stroke="#7A1228" stroke-width="6"
-                      stroke-dasharray="72 100" stroke-linecap="round"
-                      transform="rotate(-90 21 21)"/>
-            </svg>
-          </div>
+          <figure class="viz">
+            <figcaption class="viz-head"><span class="vlabel">MTBF run chart</span><span class="viz-tag">Illustrative</span></figcaption>
+            <div class="viz-art">
+              <svg viewBox="0 0 320 142" role="img" aria-labelledby="p3-t p3-d">
+              <title id="p3-t">Illustrative MTBF run chart</title><desc id="p3-d">Sample data. Mean time between failures stays under 10 minutes for six weeks, corrective actions start, and it climbs to over 60 minutes over the following eight weeks.</desc>
+              <line class="ch-grid" x1="34" y1="118.0" x2="312" y2="118.0"/><text class="ch-axis" x="28" y="121.5" text-anchor="end">0</text>
+              <line class="ch-grid" x1="34" y1="74.5" x2="312" y2="74.5"/><text class="ch-axis" x="28" y="78.0" text-anchor="end">30</text>
+              <line class="ch-grid" x1="34" y1="31.0" x2="312" y2="31.0"/><text class="ch-axis" x="28" y="34.5" text-anchor="end">60</text>
+              <text class="ch-axis" x="28" y="16" text-anchor="end">min</text>
+              <line class="ch-mark" x1="156.2" y1="22" x2="156.2" y2="118"/>
+              <text class="ch-lab" x="161.2" y="16">Corrective actions</text>
+              <path class="ch-area" d="M44.0,118 L44.0,107.8 L64.4,110.8 L84.8,106.4 L105.2,109.3 L125.6,105.0 L146.0,107.8 L166.4,86.1 L186.8,68.7 L207.2,52.8 L227.6,41.2 L248.0,33.9 L268.4,28.1 L288.8,25.2 L309.2,22.3 L309.2,118 Z"/>
+              <polyline class="ch-line" points="44.0,107.8 64.4,110.8 84.8,106.4 105.2,109.3 125.6,105.0 146.0,107.8 166.4,86.1 186.8,68.7 207.2,52.8 227.6,41.2 248.0,33.9 268.4,28.1 288.8,25.2 309.2,22.3"/>
+              <circle class="ch-dot" cx="44.0" cy="107.8" r="4"><title>Sample week 1: 7 min</title></circle>
+              <circle class="ch-dot" cx="64.4" cy="110.8" r="4"><title>Sample week 2: 5 min</title></circle>
+              <circle class="ch-dot" cx="84.8" cy="106.4" r="4"><title>Sample week 3: 8 min</title></circle>
+              <circle class="ch-dot" cx="105.2" cy="109.3" r="4"><title>Sample week 4: 6 min</title></circle>
+              <circle class="ch-dot" cx="125.6" cy="105.0" r="4"><title>Sample week 5: 9 min</title></circle>
+              <circle class="ch-dot" cx="146.0" cy="107.8" r="4"><title>Sample week 6: 7 min</title></circle>
+              <circle class="ch-dot" cx="166.4" cy="86.1" r="4"><title>Sample week 7: 22 min</title></circle>
+              <circle class="ch-dot" cx="186.8" cy="68.7" r="4"><title>Sample week 8: 34 min</title></circle>
+              <circle class="ch-dot" cx="207.2" cy="52.8" r="4"><title>Sample week 9: 45 min</title></circle>
+              <circle class="ch-dot" cx="227.6" cy="41.2" r="4"><title>Sample week 10: 53 min</title></circle>
+              <circle class="ch-dot" cx="248.0" cy="33.9" r="4"><title>Sample week 11: 58 min</title></circle>
+              <circle class="ch-dot" cx="268.4" cy="28.1" r="4"><title>Sample week 12: 62 min</title></circle>
+              <circle class="ch-dot" cx="288.8" cy="25.2" r="4"><title>Sample week 13: 64 min</title></circle>
+              <circle class="ch-dot" cx="309.2" cy="22.3" r="4"><title>Sample week 14: 66 min</title></circle>
+              <text class="ch-lab ch-strong" x="95" y="96.0" text-anchor="middle">&lt;10 min</text>
+              <text class="ch-lab ch-strong" x="309.2" y="13.3" text-anchor="end">60+ min</text>
+              <text class="ch-axis" x="95" y="134" text-anchor="middle">Before</text>
+              <text class="ch-axis" x="232" y="134" text-anchor="middle">After</text>
+              </svg>
+            </div>
+          </figure>
           <div class="p-body">
-            <div class="p-co">BAT · 2021–2022</div>
-            <div class="p-title">Manufacturing Reliability &amp; KPI Suite</div>
-            <div class="p-desc">End-to-end BI suite on plant-floor sensor data tracking OEE and machine stops — translating raw manufacturing data into targeted corrective actions for leadership and technicians.</div>
+            <div class="p-co">BAT · 2021 – 2022</div>
+            <h3 class="p-title">Manufacturing Reliability &amp; KPI Suite</h3>
+            <div class="p-kpis">
+              <div class="p-kpi"><b>6×</b><span>MTBF</span></div>
+              <div class="p-kpi"><b>60+ min</b><span>between stops (from &lt;10)</span></div>
+              <div class="p-kpi"><b>Daily</b><span>use on the plant floor</span></div>
+            </div>
+            <dl class="p-pai">
+              <div><dt>Problem</dt><dd>Frequent machine stops and no shared, timely view of what was driving downtime and waste.</dd></div>
+              <div><dt>Approach</dt><dd>A Power BI KPI suite on machine sensor data (stops, MTBF, OEE, waste), used in root-cause sessions with technicians under Lean Six Sigma methods.</dd></div>
+              <div><dt>Impact</dt><dd>MTBF rose from under 10 to 60+ minutes (6×), with corrective actions targeted by the data.</dd></div>
+            </dl>
             <details class="read-more-wrap">
-              <summary>Read more</summary>
-              <p class="full-text">Built an end-to-end operational BI suite utilizing plant-floor sensor data to actively track OEE and machine stops. By translating raw manufacturing data into targeted corrective actions, this suite empowered floor technicians and leadership to drastically reduce maintenance costs and production waste. The MTBF improvement was validated over multiple production cycles using Lean Six Sigma measurement methodology.</p>
+              <summary>Architecture &amp; details</summary>
+              <p class="full-text">Sensor and stop data cleansed and modeled in SQL and Power Query, with views for operators, technicians and plant leadership. The chart uses sample data to show the shape of the improvement.</p>
             </details>
             <div class="p-chips">
-              <span class="chip">MTBF &amp; OEE</span>
+              <span class="chip">Power BI</span>
+              <span class="chip">SQL</span>
+              <span class="chip">OEE / MTBF</span>
               <span class="chip">Lean Six Sigma</span>
-              <span class="chip">Root Cause Analysis</span>
-            </div>
-            <div class="p-impact">
-              <span class="ar">↑</span> MTBF up <span class="est">~600%<sup>est</sup></span> · from &lt;10 min to 60+ min
+              <span class="chip">SPC</span>
             </div>
           </div>
         </article>
 
       </div>
-      <div class="legend">
-        <span class="est">dotted<sup>est</sup></span> values are realistic estimates pending final figures.
-      </div>
+      <p class="legend">Visuals are simplified illustrations with sample data. No employer data is shown.</p>
     </section>
 
     <!-- Experience -->

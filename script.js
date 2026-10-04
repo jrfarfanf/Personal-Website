@@ -9,15 +9,6 @@
   });
 })();
 
-// ── Project bar chart (card 1) ─────────────────────────────────
-document.querySelectorAll('.viz.bars').forEach(viz => {
-  [42, 64, 50, 78, 60, 90, 72].forEach(h => {
-    const bar = document.createElement('i');
-    bar.style.height = h + '%';
-    viz.appendChild(bar);
-  });
-});
-
 // ── Scrollspy (sidebar active state) ──────────────────────────
 const navLinks = Array.from(document.querySelectorAll('#nav a'));
 const targets  = navLinks.map(a => document.querySelector(a.getAttribute('href')));

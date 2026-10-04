@@ -239,96 +239,185 @@
     <section class="section" id="projects">
       <div class="s-head">
         <h2><span class="tag">02</span> Proyectos</h2>
-        <span class="s-note">Proyectos seleccionados de BI</span>
+        <span class="s-note">Proyectos de BI seleccionados</span>
       </div>
       <div class="proj-grid">
 
         <article class="card proj">
-          <div class="viz bars">
-            <span class="vlabel">Rendimiento de contratos</span>
-          </div>
+          <figure class="viz">
+            <figcaption class="viz-head"><span class="vlabel">Modelo de datos</span><span class="viz-tag">Ilustrativo</span></figcaption>
+            <div class="viz-art">
+              <svg viewBox="0 0 320 150" role="img" aria-labelledby="p1-t p1-d">
+              <title id="p1-t">Diagrama simplificado del modelo semántico</title><desc id="p1-d">Tres sistemas de origen (NetSuite, Dayforce y una base de datos de contratos) alimentan un modelo semántico en esquema de galaxia: dos tablas de hechos, ingresos y contratos, comparten cuatro dimensiones (cliente, fecha, servicio y empleado). El modelo sirve a una app de Power BI usada por más de 500 personas.</desc>
+              <defs><marker id="p1-ah" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-ah"/></marker></defs>
+              <rect class="dg-box" x="4" y="21" width="74" height="24" rx="6"/><text class="dg-t" x="41" y="36.5" text-anchor="middle">NetSuite</text>
+              <line class="dg-arrow" x1="78" y1="33" x2="96" y2="33" marker-end="url(#p1-ah)"/>
+              <rect class="dg-box" x="4" y="63" width="74" height="24" rx="6"/><text class="dg-t" x="41" y="78.5" text-anchor="middle">Dayforce</text>
+              <line class="dg-arrow" x1="78" y1="75" x2="96" y2="75" marker-end="url(#p1-ah)"/>
+              <rect class="dg-box" x="4" y="105" width="74" height="24" rx="6"/><text class="dg-t" x="41" y="120.5" text-anchor="middle">BD contratos</text>
+              <line class="dg-arrow" x1="78" y1="117" x2="96" y2="117" marker-end="url(#p1-ah)"/>
+              <rect class="dg-model" x="98" y="6" width="134" height="138" rx="8"/>
+              <text class="dg-cap" x="165" y="19" text-anchor="middle">MODELO SEMÁNTICO</text>
+              <line class="dg-link" x1="134" y1="77" x2="134" y2="38"/>
+              <line class="dg-link" x1="134" y1="77" x2="198" y2="38"/>
+              <line class="dg-link" x1="134" y1="77" x2="134" y2="112"/>
+              <line class="dg-link" x1="134" y1="77" x2="198" y2="112"/>
+              <line class="dg-link" x1="198" y1="77" x2="134" y2="38"/>
+              <line class="dg-link" x1="198" y1="77" x2="198" y2="38"/>
+              <line class="dg-link" x1="198" y1="77" x2="134" y2="112"/>
+              <line class="dg-link" x1="198" y1="77" x2="198" y2="112"/>
+              <rect class="dg-dim" x="104" y="28" width="60" height="20" rx="5"/><text class="dg-t dg-t-m" x="134" y="41.5" text-anchor="middle">Cliente</text>
+              <rect class="dg-dim" x="168" y="28" width="60" height="20" rx="5"/><text class="dg-t dg-t-m" x="198" y="41.5" text-anchor="middle">Fecha</text>
+              <rect class="dg-dim" x="104" y="102" width="60" height="20" rx="5"/><text class="dg-t dg-t-m" x="134" y="115.5" text-anchor="middle">Servicio</text>
+              <rect class="dg-dim" x="168" y="102" width="60" height="20" rx="5"/><text class="dg-t dg-t-m" x="198" y="115.5" text-anchor="middle">Empleado</text>
+              <rect class="dg-fact" x="104" y="65" width="60" height="24" rx="5"/><text class="dg-t dg-fact-t" x="134" y="80.5" text-anchor="middle">Ingresos</text>
+              <rect class="dg-fact" x="168" y="65" width="60" height="24" rx="5"/><text class="dg-t dg-fact-t" x="198" y="80.5" text-anchor="middle">Contratos</text>
+              <text class="dg-cap" x="165" y="137" text-anchor="middle">ESQUEMA DE GALAXIA</text>
+              <line class="dg-arrow" x1="232" y1="75" x2="242" y2="75" marker-end="url(#p1-ah)"/>
+              <rect class="dg-out" x="244" y="40" width="72" height="70" rx="8"/>
+              <text class="dg-t dg-t-m" x="280" y="60" text-anchor="middle">Power BI</text>
+              <text class="dg-big" x="280" y="83" text-anchor="middle">500+</text>
+              <text class="dg-t dg-t-m" x="280" y="99" text-anchor="middle">usuarios</text>
+              </svg>
+            </div>
+          </figure>
           <div class="p-body">
-            <div class="p-co">Biffa · 2025–2026</div>
-            <div class="p-title">Modelo de Ventas Empresarial</div>
-            <div class="p-desc">Modelo de datos en constelación consolidando Dayforce (HR), NetSuite (CRM) y sistemas de contratos en una única fuente de la verdad — sirviendo a 500+ usuarios con visibilidad total sobre ingresos, pipeline y métricas de servicio.</div>
+            <div class="p-co">Biffa · 2025 – actualidad</div>
+            <h3 class="p-title">Modelo semántico empresarial de Ventas y Finanzas</h3>
+            <div class="p-kpis">
+              <div class="p-kpi"><b>500+</b><span>usuarios</span></div>
+              <div class="p-kpi"><b>3</b><span>sistemas de origen</span></div>
+              <div class="p-kpi"><b>~US$52 mil</b><span>de ahorro al año</span></div>
+            </div>
+            <dl class="p-pai">
+              <div><dt>Problema</dt><dd>Ventas y Finanzas reportaban desde sistemas y hojas de cálculo desconectados, con definiciones de KPI contradictorias.</dd></div>
+              <div><dt>Enfoque</dt><dd>Un modelo semántico en esquema de galaxia sobre datos de NetSuite, Dayforce y contratos, con KPI estandarizados, seguridad a nivel de fila y pipelines de implementación.</dd></div>
+              <div><dt>Impacto</dt><dd>Una única fuente de verdad para ingresos, pipeline y métricas de servicio, usada por más de 500 personas; ~US$52 mil (£40 mil) al año en reportes manuales eliminados.</dd></div>
+            </dl>
             <details class="read-more-wrap">
-              <summary>Leer más</summary>
-              <p class="full-text">Diseñé y desarrollé un robusto modelo de datos en constelación que consolida sistemas como Dayforce (HR), NetSuite (CRM) y sistemas centrales de contratos en una única fuente de la verdad. Actualmente da servicio a más de 500 usuarios; esta arquitectura proporciona visibilidad completa sobre los ingresos, volumen del pipeline y métricas de servicio, eliminando los silos de reportes ad-hoc y habilitando decisiones comerciales basadas en datos en toda la organización.</p>
+              <summary>Arquitectura y detalles</summary>
+              <p class="full-text">Las tablas de hechos de ingresos y contratos comparten dimensiones conformadas, para que Ventas y Finanzas analicen ambos en un solo modelo. Construido en Power BI con una capa de medidas DAX para el ciclo de vida de contratos y el costo de servicio, seguridad a nivel de fila y pipelines de implementación para publicaciones controladas. El diagrama está simplificado y los nombres de tablas son genéricos.</p>
             </details>
             <div class="p-chips">
               <span class="chip">Power BI</span>
-              <span class="chip">Modelado Constelación</span>
-              <span class="chip">NetSuite CRM</span>
               <span class="chip">DAX</span>
-            </div>
-            <div class="p-impact">
-              <span class="ar">↑</span> Más de <span class="est">500 usuarios<sup>est</sup></span> activos · ahorro de <span class="est">£40K+<sup>est</sup></span> (≈$52K) al año
+              <span class="chip">Esquema de galaxia</span>
+              <span class="chip">NetSuite</span>
+              <span class="chip">Dayforce</span>
+              <span class="chip">RLS</span>
             </div>
           </div>
         </article>
 
         <article class="card proj">
-          <div class="viz line">
-            <span class="vlabel">Brechas SLA ↓</span>
-            <svg viewBox="0 0 300 118" preserveAspectRatio="none">
-              <polyline points="0,28 50,40 100,34 150,62 200,74 250,92 300,102"
-                        fill="none" stroke="#7A1228" stroke-width="3"/>
-              <polyline points="0,28 50,40 100,34 150,62 200,74 250,92 300,102 300,118 0,118"
-                        fill="rgba(122,18,40,.07)" stroke="none"/>
-            </svg>
-          </div>
+          <figure class="viz">
+            <figcaption class="viz-head"><span class="vlabel">Selección guiada</span><span class="viz-tag">Ilustrativo</span></figcaption>
+            <div class="viz-art">
+              <svg viewBox="0 0 320 150" role="img" aria-labelledby="p2-t p2-d">
+              <title id="p2-t">Embudo de selección de solicitudes de cambio</title><desc id="p2-d">La herramienta reduce cientos de tipos de solicitudes de cambio paso a paso, por tipo de cambio, objeto de datos y mercado, hasta llegar a la única solicitud correcta.</desc>
+              <rect class="fn-bar" x="10" y="8" width="284" height="22" rx="4" fill-opacity="0.08"/>
+              <text class="dg-t" x="152" y="23" text-anchor="middle">Cientos de tipos de CR</text>
+              <rect class="fn-bar" x="45" y="36" width="214" height="22" rx="4" fill-opacity="0.14"/>
+              <text class="dg-t" x="152" y="51" text-anchor="middle">por tipo de cambio</text>
+              <rect class="fn-bar" x="77" y="64" width="150" height="22" rx="4" fill-opacity="0.22"/>
+              <text class="dg-t" x="152" y="79" text-anchor="middle">por objeto de datos</text>
+              <rect class="fn-bar" x="104" y="92" width="96" height="22" rx="4" fill-opacity="0.32"/>
+              <text class="dg-t" x="152" y="107" text-anchor="middle">por mercado</text>
+              <rect class="fn-bar" x="132" y="120" width="40" height="22" rx="4" fill-opacity="1"/>
+              <text class="dg-t fn-end" x="180" y="135">La CR correcta</text>
+              </svg>
+            </div>
+          </figure>
           <div class="p-body">
-            <div class="p-co">BAT · 2022–2025</div>
-            <div class="p-title">Herramienta de Selección de CR</div>
-            <div class="p-desc">Herramienta dinámica de selección de Change Requests para guiar al equipo global de Operaciones hacia los CRs correctos para cambios de SKUs — equilibrando UX fluida con estricta gobernanza de datos maestros.</div>
+            <div class="p-co">BAT · 2022 – 2025</div>
+            <h3 class="p-title">Herramienta de selección de solicitudes de cambio</h3>
+            <div class="p-kpis">
+              <div class="p-kpi"><b>12+</b><span>países</span></div>
+              <div class="p-kpi"><b>200+ h</b><span>ahorradas al mes</span></div>
+              <div class="p-kpi"><b>3 mil+</b><span>vistas al mes</span></div>
+            </div>
+            <dl class="p-pai">
+              <div><dt>Problema</dt><dd>Los usuarios de Operaciones en más de 12 mercados debían elegir la solicitud de cambio (CR) de SKU correcta entre cientos de tipos; los errores generaban retrabajo e incumplimientos de SLA.</dd></div>
+              <div><dt>Enfoque</dt><dd>Una herramienta de selección guiada que reduce las opciones paso a paso (tipo de cambio, objeto de datos y mercado), basada en las reglas globales de datos maestros en SAP ECC/Fiori.</dd></div>
+              <div><dt>Impacto</dt><dd>Menos solicitudes incorrectas y un ahorro estimado de más de 200 horas al mes para el equipo global.</dd></div>
+            </dl>
             <details class="read-more-wrap">
-              <summary>Leer más</summary>
-              <p class="full-text">Diseñé una herramienta dinámica de selección de Change Requests (CR) para el equipo global de Operaciones. Esta solución guía de manera inteligente a los usuarios hacia los CRs correctos disponibles para soportar cambios de datos en SKUs y especificaciones, cerrando la brecha entre una experiencia de usuario fluida y el estricto cumplimiento de los estándares globales de datos maestros y los marcos de SLA. La herramienta gestiona cientos de tipos de CR únicos en más de 12 países.</p>
+              <summary>Arquitectura y detalles</summary>
+              <p class="full-text">Incorpora las reglas de gobernanza de datos maestros en un flujo sencillo, de modo que el estándar se cumple por diseño y no por revisión. Se complementa con dashboards de cumplimiento de SLA en Power BI para el equipo de ODM. Los pasos del embudo están simplificados.</p>
             </details>
             <div class="p-chips">
-              <span class="chip">Datos Maestros</span>
+              <span class="chip">Datos maestros</span>
               <span class="chip">SAP ECC/Fiori</span>
-              <span class="chip">Gobierno de Datos</span>
-            </div>
-            <div class="p-impact">
-              <span class="ar">↑</span> <span class="est">+3K vistas/mes<sup>est</sup></span> · <span class="est">+200 h ahorradas/mes<sup>est</sup></span>
+              <span class="chip">Gobernanza de datos</span>
+              <span class="chip">UX para datos</span>
             </div>
           </div>
         </article>
 
         <article class="card proj">
-          <div class="viz donut">
-            <span class="vlabel">Incremento MTBF</span>
-            <svg width="84" height="84" viewBox="0 0 42 42">
-              <circle cx="21" cy="21" r="15.9" fill="none" stroke="#E7E9EE" stroke-width="6"/>
-              <circle cx="21" cy="21" r="15.9" fill="none" stroke="#7A1228" stroke-width="6"
-                      stroke-dasharray="72 100" stroke-linecap="round"
-                      transform="rotate(-90 21 21)"/>
-            </svg>
-          </div>
+          <figure class="viz">
+            <figcaption class="viz-head"><span class="vlabel">Gráfico de MTBF</span><span class="viz-tag">Ilustrativo</span></figcaption>
+            <div class="viz-art">
+              <svg viewBox="0 0 320 142" role="img" aria-labelledby="p3-t p3-d">
+              <title id="p3-t">Gráfico ilustrativo de MTBF</title><desc id="p3-d">Datos de ejemplo. El tiempo medio entre fallas se mantiene por debajo de 10 minutos durante seis semanas; tras las acciones correctivas sube a más de 60 minutos en las ocho semanas siguientes.</desc>
+              <line class="ch-grid" x1="34" y1="118.0" x2="312" y2="118.0"/><text class="ch-axis" x="28" y="121.5" text-anchor="end">0</text>
+              <line class="ch-grid" x1="34" y1="74.5" x2="312" y2="74.5"/><text class="ch-axis" x="28" y="78.0" text-anchor="end">30</text>
+              <line class="ch-grid" x1="34" y1="31.0" x2="312" y2="31.0"/><text class="ch-axis" x="28" y="34.5" text-anchor="end">60</text>
+              <text class="ch-axis" x="28" y="16" text-anchor="end">min</text>
+              <line class="ch-mark" x1="156.2" y1="22" x2="156.2" y2="118"/>
+              <text class="ch-lab" x="161.2" y="16">Acciones correctivas</text>
+              <path class="ch-area" d="M44.0,118 L44.0,107.8 L64.4,110.8 L84.8,106.4 L105.2,109.3 L125.6,105.0 L146.0,107.8 L166.4,86.1 L186.8,68.7 L207.2,52.8 L227.6,41.2 L248.0,33.9 L268.4,28.1 L288.8,25.2 L309.2,22.3 L309.2,118 Z"/>
+              <polyline class="ch-line" points="44.0,107.8 64.4,110.8 84.8,106.4 105.2,109.3 125.6,105.0 146.0,107.8 166.4,86.1 186.8,68.7 207.2,52.8 227.6,41.2 248.0,33.9 268.4,28.1 288.8,25.2 309.2,22.3"/>
+              <circle class="ch-dot" cx="44.0" cy="107.8" r="4"><title>Semana de ejemplo 1: 7 min</title></circle>
+              <circle class="ch-dot" cx="64.4" cy="110.8" r="4"><title>Semana de ejemplo 2: 5 min</title></circle>
+              <circle class="ch-dot" cx="84.8" cy="106.4" r="4"><title>Semana de ejemplo 3: 8 min</title></circle>
+              <circle class="ch-dot" cx="105.2" cy="109.3" r="4"><title>Semana de ejemplo 4: 6 min</title></circle>
+              <circle class="ch-dot" cx="125.6" cy="105.0" r="4"><title>Semana de ejemplo 5: 9 min</title></circle>
+              <circle class="ch-dot" cx="146.0" cy="107.8" r="4"><title>Semana de ejemplo 6: 7 min</title></circle>
+              <circle class="ch-dot" cx="166.4" cy="86.1" r="4"><title>Semana de ejemplo 7: 22 min</title></circle>
+              <circle class="ch-dot" cx="186.8" cy="68.7" r="4"><title>Semana de ejemplo 8: 34 min</title></circle>
+              <circle class="ch-dot" cx="207.2" cy="52.8" r="4"><title>Semana de ejemplo 9: 45 min</title></circle>
+              <circle class="ch-dot" cx="227.6" cy="41.2" r="4"><title>Semana de ejemplo 10: 53 min</title></circle>
+              <circle class="ch-dot" cx="248.0" cy="33.9" r="4"><title>Semana de ejemplo 11: 58 min</title></circle>
+              <circle class="ch-dot" cx="268.4" cy="28.1" r="4"><title>Semana de ejemplo 12: 62 min</title></circle>
+              <circle class="ch-dot" cx="288.8" cy="25.2" r="4"><title>Semana de ejemplo 13: 64 min</title></circle>
+              <circle class="ch-dot" cx="309.2" cy="22.3" r="4"><title>Semana de ejemplo 14: 66 min</title></circle>
+              <text class="ch-lab ch-strong" x="95" y="96.0" text-anchor="middle">&lt;10 min</text>
+              <text class="ch-lab ch-strong" x="309.2" y="13.3" text-anchor="end">60+ min</text>
+              <text class="ch-axis" x="95" y="134" text-anchor="middle">Antes</text>
+              <text class="ch-axis" x="232" y="134" text-anchor="middle">Después</text>
+              </svg>
+            </div>
+          </figure>
           <div class="p-body">
-            <div class="p-co">BAT · 2021–2022</div>
-            <div class="p-title">Suite de KPIs y Confiabilidad de Manufactura</div>
-            <div class="p-desc">Suite de BI end-to-end sobre datos de sensores en planta rastreando OEE y paradas de máquina — traduciendo datos de manufactura en acciones correctivas específicas para técnicos y liderazgo.</div>
+            <div class="p-co">BAT · 2021 – 2022</div>
+            <h3 class="p-title">Suite de KPI de confiabilidad de manufactura</h3>
+            <div class="p-kpis">
+              <div class="p-kpi"><b>6×</b><span>MTBF</span></div>
+              <div class="p-kpi"><b>60+ min</b><span>entre paradas (antes &lt;10)</span></div>
+              <div class="p-kpi"><b>Diario</b><span>uso en planta</span></div>
+            </div>
+            <dl class="p-pai">
+              <div><dt>Problema</dt><dd>Paradas frecuentes de máquina y ninguna vista compartida y oportuna de las causas del tiempo de inactividad y el desperdicio.</dd></div>
+              <div><dt>Enfoque</dt><dd>Una suite de KPI en Power BI sobre datos de sensores de máquinas (paradas, MTBF, OEE y desperdicio), usada en sesiones de causa raíz con los técnicos bajo metodología Lean Six Sigma.</dd></div>
+              <div><dt>Impacto</dt><dd>El MTBF pasó de menos de 10 a más de 60 minutos (6×), con acciones correctivas enfocadas por los datos.</dd></div>
+            </dl>
             <details class="read-more-wrap">
-              <summary>Leer más</summary>
-              <p class="full-text">Construí una suite integral de BI operativo end-to-end utilizando datos de sensores en la planta para rastrear activamente el OEE y las paradas de máquina. Al traducir datos de manufactura en bruto hacia acciones correctivas específicas, esta suite empoderó a los técnicos de planta y al liderazgo para reducir drásticamente los costos de mantenimiento y los desperdicios de producción. La mejora del MTBF fue validada a lo largo de múltiples ciclos de producción utilizando la metodología de medición de Lean Six Sigma.</p>
+              <summary>Arquitectura y detalles</summary>
+              <p class="full-text">Datos de sensores y paradas depurados y modelados con SQL y Power Query, con vistas para operadores, técnicos y la gerencia de planta. El gráfico usa datos de ejemplo para mostrar la forma de la mejora.</p>
             </details>
             <div class="p-chips">
-              <span class="chip">MTBF y OEE</span>
+              <span class="chip">Power BI</span>
+              <span class="chip">SQL</span>
+              <span class="chip">OEE / MTBF</span>
               <span class="chip">Lean Six Sigma</span>
-              <span class="chip">Análisis de Causa Raíz</span>
-            </div>
-            <div class="p-impact">
-              <span class="ar">↑</span> MTBF incrementado <span class="est">~600%<sup>est</sup></span> · de &lt;10 min a 60+ min
+              <span class="chip">CEP</span>
             </div>
           </div>
         </article>
 
       </div>
-      <div class="legend">
-        Los valores <span class="est">subrayados<sup>est</sup></span> son estimaciones realistas pendientes de cifras definitivas.
-      </div>
+      <p class="legend">Las visualizaciones son ilustraciones simplificadas con datos de ejemplo. No se muestran datos de ningún empleador.</p>
     </section>
 
     <!-- Experience -->
