@@ -39,7 +39,7 @@ Dates are **MM/YYYY**. LinkedIn uses month pickers, so choose the same months.
 
 **Rules**
 - Job titles are the **official** titles, because employers confirm them in background checks. Positioning ("Developer & Data Lead") lives only in the headline and summary, never in a job title.
-- "Executive" at BAT is a UK grade for a professional role, not a C-level title. On the site it carries the note "UK title · BI Analyst in US terms" (**pending Jose's confirmation of the level**). In conversation: "it's the UK name for an analyst role on the global team".
+- "Executive" at BAT is a UK grade for a professional role, not a C-level title. On the site it carries the note "UK title · BI Analyst in US terms" (confirmed 13 Nov 2026; the résumés carry the same note). In conversation: "it's the UK name for an analyst role on the global team".
 - No current employer since 11/2026: nothing on the site, résumé or LinkedIn says "Present".
 - **Employer names are written for a US reader** (decided 12 Nov 2026). Wherever space allows: **Biffa Waste Services** and **BAT (British American Tobacco)**. Short forms ("Biffa", "BAT") only inside a sentence after the full name has appeared, or where the layout has no room. BAT may carry the descriptor "parent company of Reynolds American" (its US subsidiary); never say Jose worked for Reynolds American. On LinkedIn, pick the existing company pages (Biffa; BAT), since the page name is fixed. Exception: the career strip on the site says "British American Tobacco" so the name fits on one line.
 - On the résumé, the two BAT roles can sit under one "BAT (British American Tobacco)" heading, but **each keeps its own title, location and dates**.
