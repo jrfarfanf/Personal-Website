@@ -1,15 +1,15 @@
 # Résumé: outline, wording and industry versions
 
-*Last updated: 12 November 2026.* Titles, dates, employers and numbers come from CONSISTENCY.md. If a fact changes, change it there first.
+*Last updated: 13 November 2026.* The built files are tighter than the outline text below (5 skills lines; 3–5 bullets per recent role; each role kept on one page). Every file is named `Jose-Farfan-Resume` and told apart by its folder. Titles, dates, employers and numbers come from CONSISTENCY.md. If a fact changes, change it there first.
 
 ## The four versions
 
 | Version | Use it for | Status |
 |---|---|---|
 | **General** | The website download; any application that doesn't clearly fit A, B or C | **Built.** `assets/Jose-Farfan-Resume.docx` and `.pdf` |
-| **A. Manufacturing & semiconductor operations** | Plant, fab, operations and business-solutions analytics roles; process-improvement and engineering-analytics roles | Outlined below, files not built yet |
-| **B. Enterprise BI / Microsoft data stack** | Senior BI Developer, Power BI Developer, Analytics Engineer and BI Lead roles; Microsoft partners and consultancies | Outlined below, files not built yet |
-| **C. Operations & commercial analytics** | Revenue, contract, pricing and operations analytics in services, distribution, logistics, mining and utilities | Outlined below, files not built yet |
+| **A. Manufacturing & semiconductor operations** | Plant, fab, operations and business-solutions analytics roles; process-improvement and engineering-analytics roles | **Built 13 Nov 2026** in the private `resumes/` folder |
+| **B. Enterprise BI / Microsoft data stack** | Senior BI Developer, Power BI Developer, Analytics Engineer and BI Lead roles; Microsoft partners and consultancies | **Built 13 Nov 2026** in the private `resumes/` folder |
+| **C. Operations & commercial analytics** | Revenue, contract, pricing and operations analytics in services, distribution, logistics, mining and utilities | **Built 13 Nov 2026** in the private `resumes/` folder |
 
 All four use the same facts, titles, dates and numbers. Only the headline, the summary, the order of the skills lines and the order of the bullets change. Nothing is added to one version that isn't true in all of them.
 
