@@ -158,6 +158,7 @@ Check every change at 1440px, 768px and 390px.
 |---|---|
 | June 2026 | Original "dashboard" prototype: sidebar shell, tiles, burgundy accent |
 | 4 Oct 2026 | Recruiter audit: new hero and tiles, project cards with illustrations, progressive disclosure, self-hosted font, Spanish at `/es/` |
+| 13 Nov 2026 | Highlighted chips (accent fill) mark the most relevant skills and always come first, in role cards and in the Skills section; Excel added to every role. Data-flow diagram redrawn as three labeled columns (data sources → one source of truth → business units). MTBF chart now in months: about six months of baseline, then a sustained plateau |
 | 12 Nov 2026 | Career strip: the summary cell is now a header band at every width, with a title, the reading order and the totals |
 | 12 Nov 2026 | Career strip: last cell renamed "Early career"; summary cell all bold; names kept to one line at every desktop width (summary cell turns into a top band on narrower screens); summary paragraph reworded by the owner |
 | 12 Nov 2026 | Result tiles renamed and reordered to mirror the headline (Revenue recovery, Cost savings, Process improvement, Adoption); career strip rebuilt on a shared row grid with equal employer cells; authorization note fixed to two lines; Microsoft Fabric added to Tools |

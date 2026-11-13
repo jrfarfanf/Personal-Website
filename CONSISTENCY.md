@@ -80,18 +80,18 @@ Use only these, phrased the same way everywhere. Methods are in RESUME-OUTLINE.m
 | OEE (BAT plant) | ~65% → ~71% over the year (target 70%) |
 | Clients (ASIS) | 5+ major tax-consulting clients |
 | 3D TECH | 6+ medical models a month (mainly jaw models) |
-| VHICOA | 2–3 vessel projects, each $30M+ |
+| VHICOA | 2 vessel projects, each $30M+ (user confirmed 13 Nov 2026; not "2–3") |
 | Mentoring | 5+ team members mentored |
 | Cost-benefit | values projects and process improvements with cost-benefit models (time saved × labor cost, revenue at risk). A business-case model, **not** product cost modeling. |
 | Awards | Nominee, Diamond Awards (Biffa Waste Services) · Digital Learner Award (BAT (British American Tobacco)) |
 
-**Not to be used:** "12+ countries" (not confirmed; say "five continents" or "global"); any claim that the CR tool reduced SLA breaches; "recovered £5M"; product cost modeling; semiconductor or packaging experience; JMP; Tableau.
+**Not to be used:** MySQL as a skill (say SQL; the ASIS partner team is "the Data Engineering team"); "SLA frameworks" as a separate BAT bullet (redundant with SLA-compliance reporting); "12+ countries" (not confirmed; say "five continents" or "global"); any claim that the CR tool reduced SLA breaches; "recovered £5M"; product cost modeling; semiconductor or packaging experience; JMP; Tableau.
 
 ## 5. Skills: top 3 everywhere
 
 **Power BI · DAX · Microsoft Fabric.** Pin these as LinkedIn Top Skills, list them first in the résumé Skills section, and show them as solid chips on the site.
 
-Full list (all confirmed true): Power BI, DAX, Power Query (M), T-SQL, MySQL, Microsoft Fabric (Lakehouse, Warehouse, Dataflows Gen2, PySpark notebooks), semantic models, star / galaxy schema, row-level security, deployment pipelines, data governance, data quality, master data management, KPI definition, stakeholder management, change management, mentoring, coaching, requirements gathering, Azure DevOps, Agile / Scrum, SAP ECC / Fiori, NetSuite, Dayforce, OEE, MTBF, Lean Six Sigma methods, SPC, root cause analysis, Excel / Power Pivot, Claude Code. **Added November 2026:** Python (PySpark), project management, PowerPoint, cost-benefit analysis, bills of materials (BOM).
+Full list (all confirmed true): Power BI, DAX, Power Query (M), SQL (T-SQL), advanced Excel / Power Pivot, Microsoft Fabric (Lakehouse, Warehouse, Dataflows Gen2, PySpark notebooks), semantic models, star / galaxy schema, row-level security, deployment pipelines, data governance, data quality, master data management, KPI definition, stakeholder management, change management, mentoring, coaching, requirements gathering, Azure DevOps, Agile / Scrum, SAP ECC / Fiori, NetSuite, Dayforce, OEE, MTBF, Lean Six Sigma methods, SPC, root cause analysis, Excel / Power Pivot, Claude Code. **Added November 2026:** Python (PySpark), project management, PowerPoint, cost-benefit analysis, bills of materials (BOM).
 
 **Not** to be listed: Azure Synapse, JMP, Tableau, any certification not yet earned.
 

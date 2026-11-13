@@ -727,6 +727,9 @@ details.read-more-wrap .full-text {
 .dg-t-m    { fill: var(--muted); }
 .dg-fact-t { fill: #fff; font-weight: 600; }
 .dg-cap    { font-family: inherit; font-size: 8.5px; font-weight: 600; letter-spacing: .08em; fill: var(--faint); }
+.dg-head   { font-size: 8px; letter-spacing: .05em; fill: var(--muted); }
+.dg-head-on { fill: var(--accent); }
+.dg-users  { font-weight: 700; fill: var(--text); }
 .dg-big    { font-family: inherit; font-size: 17px; font-weight: 700; letter-spacing: -.02em; fill: var(--text); }
 .dg-box    { fill: var(--surface); stroke: var(--border); }
 .dg-model  { fill: var(--surface); stroke: var(--border); }
@@ -796,6 +799,14 @@ details.read-more-wrap .full-text {
 }
 .p-kpi b    { display: block; font-size: 19px; font-weight: 700; letter-spacing: -.02em; line-height: 1.2; font-variant-numeric: tabular-nums; }
 .p-kpi span { font-size: 12.5px; color: var(--muted); }
+/* Laptops: slightly tighter project tiles so the three stay on one row */
+@media (min-width: 981px) and (max-width: 1439px) {
+  .p-kpis { gap: 6px; }
+  .p-kpi { padding: 8px 11px; min-width: 0; }
+  .p-kpi b { font-size: 17px; }
+  .p-kpi span { font-size: 12px; }
+  .p-kpi .trend { margin-right: 4px; }
+}
 .p-kpi .trend {
   font-style: normal;
   font-size: 12px;

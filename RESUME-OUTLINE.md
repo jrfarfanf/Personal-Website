@@ -41,11 +41,11 @@ linkedin.com/in/jose-rafael-farfan | josefarfan.com | Authorized to work in the 
 Senior BI developer and data lead with 7+ years in data analytics and 10+ years across engineering and data. Turns operations, sales and finance data into recommendations on revenue, cost and process efficiency, and leads the projects, governance and adoption that make them stick. Led a Sales & Finance semantic model adopted by 500+ users that flagged £5M+ (~$6.5M) in contract revenue for review. Mechanical engineer who raised packing-machine MTBF 6× with sensor data and Lean Six Sigma methods. Bilingual English/Spanish.
 
 ### SKILLS
-- **BI & Modeling:** Power BI, DAX, Power Query (M), semantic models, star/galaxy schema, row-level security, deployment pipelines, KPI design, data storytelling, PowerPoint
-- **Data Engineering:** T-SQL, Python (PySpark), MySQL, Microsoft Fabric (Lakehouse, Warehouse, Dataflows Gen2), ETL/ELT
+- **BI & Modeling:** Power BI, DAX, Power Query (M), advanced Excel (Power Pivot), semantic models, star/galaxy schema, row-level security, deployment pipelines, KPI design, data storytelling, PowerPoint
+- **Data Engineering:** SQL (T-SQL), Python (PySpark), Microsoft Fabric (Lakehouse, Warehouse, Dataflows Gen2), ETL/ELT
 - **Leadership & Governance:** stakeholder management, requirements gathering, data governance, data quality, master data management, KPI standardization, change management, mentoring, coaching
 - **Project Delivery & Platforms:** project management, Azure DevOps, Agile/Scrum, sprint planning, backlog management, SAP ECC/Fiori (ERP), NetSuite, Dayforce
-- **Manufacturing & Process Improvement:** Lean Six Sigma methods, root cause analysis, OEE, MTBF, SPC, Lean manufacturing, cost-benefit analysis, bills of materials (BOM), Excel/Power Pivot
+- **Manufacturing & Process Improvement:** Lean Six Sigma methods, root cause analysis, OEE, MTBF, SPC, Lean manufacturing, cost-benefit analysis, bills of materials (BOM)
 - **AI & Automation:** AI-assisted development (Claude Code, MCP servers), LLM workflow automation
 - **Languages:** English (fluent), Spanish (native)
 
@@ -68,7 +68,6 @@ BAT (British American Tobacco) — Southampton, United Kingdom
 12/2022 – 01/2025
 1. *[SAP]* Built Power BI SLA-compliance reporting for the global Operations Data Management team: 3,000+ SKU master-data change requests a month (bills of materials, leaf and packaging specifications) in SAP ECC/Fiori across five continents.
 2. *[tool]* Designed a change-request selection tool that routes users to the right option among 200+ CR types, cutting selection time from ~5 to ~1 minute (200+ hours saved a month) and incorrect requests by ~10%.
-3. *[SLA]* Designed and enforced SLA frameworks for global reporting processes, reducing delivery variability for cross-functional teams.
 4. *[quality]* Ensured strict process adherence and high data-quality standards for SAP master data, helping sustain the 99% master-data quality compliance target through monitoring, prevention and corrective fixes.
 5. *[storytelling]* Delivered executive data storytelling in PowerPoint and Power BI for regional and global Continuous Improvement / Work Process Improvement leadership.
 
@@ -84,7 +83,7 @@ BAT (British American Tobacco) — Caracas, Venezuela
 ASIS Consulting — Caracas, Venezuela
 07/2019 – 06/2021
 1. Delivered Power BI solutions for 5+ major tax-consulting clients: financial modeling, tax and transactional reporting with DAX time intelligence.
-2. Administered Power BI Service across client environments (workspace governance, deployment, user access) and translated stakeholder requirements into scalable data models with the MySQL team.
+2. Administered Power BI Service across client environments (workspace governance, deployment, user access) and translated stakeholder requirements into scalable data models with the Data Engineering team.
 
 **3D Printing Engineer**
 3D TECH — Caracas, Venezuela
@@ -94,7 +93,7 @@ ASIS Consulting — Caracas, Venezuela
 **Junior Project Engineer**
 Venezuelan Heavy Industry CA (VHICOA) — Bolívar, Venezuela
 02/2016 – 02/2017
-1. Worked on 2–3 high-pressure vessel projects for the oil industry ($30M+ each) to ASME, AWS and API standards: drawings, NDT and hydrostatic testing, and materials, labor and progress tracking in Excel.
+1. Worked on 2 high-pressure vessel projects for the oil industry ($30M+ each) to ASME, AWS and API standards: drawings, NDT and hydrostatic testing, and materials, labor and progress tracking in Excel.
 
 ### EDUCATION
 **Bachelor of Engineering (B.Eng.), Mechanical Engineering**
@@ -146,7 +145,7 @@ Senior BI developer and data lead with 7+ years in Power BI and 10+ years across
 - Biffa: model, governance, definitions, delivery, revenue, efficiency.
 - BAT Executive: tool, SAP, SLA, storytelling. Drop quality if space is short.
 - BAT Engineer: suite, automation, reliability.
-- ASIS: restore three bullets (client delivery; Power BI Service administration; requirements to data models with the MySQL team). Consulting experience matters to partners.
+- ASIS: restore three bullets (client delivery; Power BI Service administration; requirements to data models with the Data Engineering team). Consulting experience matters to partners.
 - 3D TECH and VHICOA: one line each.
 
 **Words to mirror when true:** semantic model, star schema, DAX, Power Query, Fabric, Lakehouse, Warehouse, row-level security, deployment pipelines, Azure DevOps, data governance, self-service BI, requirements gathering, stakeholder management.
