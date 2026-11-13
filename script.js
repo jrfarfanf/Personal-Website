@@ -1,14 +1,3 @@
-// ── Spark bars (value prop panel) ─────────────────────────────
-(function () {
-  const spark = document.getElementById('spark');
-  if (!spark) return;
-  [34, 52, 40, 66, 58, 80, 72, 92].forEach(h => {
-    const bar = document.createElement('i');
-    bar.style.height = h + '%';
-    spark.appendChild(bar);
-  });
-})();
-
 // ── Scrollspy (sidebar active state) ──────────────────────────
 const navLinks = Array.from(document.querySelectorAll('#nav a'));
 const targets  = navLinks.map(a => document.querySelector(a.getAttribute('href')));
@@ -39,11 +28,12 @@ targets.forEach(sec => { if (sec) observer.observe(sec); });
   io.observe(cta);
 })();
 
-// ── Skills: first few chips per tile, the rest on demand ──────
-// One toggle state for the whole grid, so every tile opens and closes
-// together and the rows stay symmetric. Without JS every chip is shown.
+// ── Skills: on phones, first few chips per tile and the rest on demand ──
+// Desktop and tablet show every skill, so a recruiter's Ctrl+F finds them.
+// One toggle state for the whole grid, so every tile opens and closes together.
 (function () {
   const es = document.documentElement.lang === 'es';
+  const phone = window.matchMedia('(max-width: 620px)');
   const groups = [];
   document.querySelectorAll('.chips[data-visible]').forEach(box => {
     const extra = Array.from(box.children).slice(Number(box.dataset.visible));
@@ -55,13 +45,15 @@ targets.forEach(sec => { if (sec) observer.observe(sec); });
     groups.push({ extra, btn });
   });
   const render = open => groups.forEach(({ extra, btn }) => {
-    extra.forEach(c => { c.hidden = !open; });
+    btn.hidden = !phone.matches;
+    extra.forEach(c => { c.hidden = phone.matches && !open; });
     btn.setAttribute('aria-expanded', String(open));
     btn.textContent = open ? (es ? 'Ver menos' : 'Show less')
                            : (es ? `Ver ${extra.length} más` : `Show ${extra.length} more`);
   });
   let open = false;
   groups.forEach(({ btn }) => btn.addEventListener('click', () => { open = !open; render(open); }));
+  phone.addEventListener('change', () => render(open));
   render(false);
 })();
 
@@ -76,6 +68,6 @@ targets.forEach(sec => { if (sec) observer.observe(sec); });
     if (!e.isIntersecting) return;
     e.target.classList.add('in-view');
     io.unobserve(e.target);
-  }), { threshold: 0.35 });
+  }), { threshold: 0.15 });
   vizzes.forEach(v => io.observe(v));
 })();
