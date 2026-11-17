@@ -63,10 +63,10 @@ Biffa Waste Services — London, United Kingdom (Hybrid)
 5. *[delivery]* Brought a structured approach to project management and execution: introduced Azure DevOps sprint delivery for the 8-person BI team, with a prioritized, visible backlog and cost-benefit sizing (time saved × labor cost, revenue at risk) for each project.
 6. *[governance]* Owned model governance and administrative controls (row-level security, deployment pipelines, refresh reliability); cut refresh time from 20 to 5 minutes while covering more data.
 
-**Business Intelligence Executive**
+**Continuous Improvement and Data Quality Executive**
 BAT (British American Tobacco) — Southampton, United Kingdom
 12/2022 – 01/2025
-*UK job title; US equivalent: Business Intelligence Analyst*
+*UK job title; US equivalent: Continuous Improvement & Data Quality Analyst*
 1. *[SAP]* Built Power BI SLA-compliance reporting for the global Operations Data Management team: 3,000+ SKU master-data change requests a month (bills of materials, leaf and packaging specifications) in SAP ECC/Fiori across five continents.
 2. *[tool]* Designed a change-request selection tool that routes users to the right option among 200+ CR types, cutting selection time from ~5 to ~1 minute (200+ hours saved a month) and incorrect requests by ~10%.
 4. *[quality]* Ensured strict process adherence and high data-quality standards for SAP master data, helping sustain the 99% master-data quality compliance target through monitoring, prevention and corrective fixes.
