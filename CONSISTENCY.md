@@ -32,14 +32,15 @@ Dates are **MM/YYYY**. LinkedIn uses month pickers, so choose the same months.
 |---|---|---|---|---|---|---|
 | 1 | Senior Business Intelligence Analyst | Biffa Waste Services | London, United Kingdom | 01/2025 | 11/2026 | Hybrid |
 | 2 | Business Intelligence Executive | BAT (British American Tobacco) | Southampton, United Kingdom | 12/2022 | 01/2025 | Hybrid |
-| 3 | Business Intelligence Engineer | BAT (British American Tobacco) | Caracas, Venezuela | 06/2021 | 12/2022 | On-site |
+| 3 | Shift Lead, Secondary Manufacturing | BAT (British American Tobacco) | Caracas, Venezuela | 06/2021 | 12/2022 | On-site |
 | 4 | Business Intelligence Developer | ASIS Consulting | Caracas, Venezuela | 07/2019 | 06/2021 | Hybrid |
 | 5 | 3D Printing Engineer | 3D TECH | Caracas, Venezuela | 03/2017 | 06/2019 | On-site |
 | 6 | Junior Project Engineer | Venezuelan Heavy Industry CA (VHICOA) | Bolívar, Venezuela | 02/2016 | 02/2017 | On-site |
 
 **Rules**
 - Job titles are the **official** titles, because employers confirm them in background checks. Positioning ("Developer & Data Lead") lives only in the headline and summary, never in a job title.
-- "Executive" at BAT is a UK grade for a professional role, not a C-level title. On the site it carries the note "UK title · BI Analyst in US terms" (confirmed 13 Nov 2026; the résumés carry the same note). In conversation: "it's the UK name for an analyst role on the global team".
+- "Executive" at BAT is a UK grade for a professional role, not a C-level title. On the site it carries the note "UK title · BI Analyst in US terms" (confirmed 13 Nov 2026). On the résumés the note sits on its own line under the dates ("UK job title; US equivalent: Business Intelligence Analyst"), because Workday stopped reading a title line that included the note in brackets (found 13 Nov 2026). In conversation: "it's the UK name for an analyst role on the global team".
+- BAT Caracas: the official title is "Shift Lead SMD" (SMD = Secondary Manufacturing Department). It is written spelled out as **Shift Lead, Secondary Manufacturing** because in semiconductors "SMD" means surface-mount device (decided 16 Nov 2026; it replaces the earlier "Business Intelligence Engineer"). The focus note goes on its own line under the dates, never in the title line, so ATS parsers still read it as a title: résumé "Focus: BI & process improvement"; site "(BI & process improvement)". LinkedIn uses the same title.
 - No current employer since 11/2026: nothing on the site, résumé or LinkedIn says "Present".
 - **Employer names are written for a US reader** (decided 12 Nov 2026). Wherever space allows: **Biffa Waste Services** and **BAT (British American Tobacco)**. Short forms ("Biffa", "BAT") only inside a sentence after the full name has appeared, or where the layout has no room. BAT may carry the descriptor "parent company of Reynolds American" (its US subsidiary); never say Jose worked for Reynolds American. On LinkedIn, pick the existing company pages (Biffa; BAT), since the page name is fixed. Exception: the career strip on the site says "British American Tobacco" so the name fits on one line.
 - On the résumé, the two BAT roles can sit under one "BAT (British American Tobacco)" heading, but **each keeps its own title, location and dates**.

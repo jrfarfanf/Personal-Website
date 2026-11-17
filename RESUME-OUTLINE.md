@@ -66,14 +66,16 @@ Biffa Waste Services — London, United Kingdom (Hybrid)
 **Business Intelligence Executive**
 BAT (British American Tobacco) — Southampton, United Kingdom
 12/2022 – 01/2025
+*UK job title; US equivalent: Business Intelligence Analyst*
 1. *[SAP]* Built Power BI SLA-compliance reporting for the global Operations Data Management team: 3,000+ SKU master-data change requests a month (bills of materials, leaf and packaging specifications) in SAP ECC/Fiori across five continents.
 2. *[tool]* Designed a change-request selection tool that routes users to the right option among 200+ CR types, cutting selection time from ~5 to ~1 minute (200+ hours saved a month) and incorrect requests by ~10%.
 4. *[quality]* Ensured strict process adherence and high data-quality standards for SAP master data, helping sustain the 99% master-data quality compliance target through monitoring, prevention and corrective fixes.
 5. *[storytelling]* Delivered executive data storytelling in PowerPoint and Power BI for regional and global Continuous Improvement / Work Process Improvement leadership.
 
-**Business Intelligence Engineer**
+**Shift Lead, Secondary Manufacturing**
 BAT (British American Tobacco) — Caracas, Venezuela
 06/2021 – 12/2022
+*Focus: BI & process improvement*
 1. *[suite]* Built an end-to-end Power BI KPI suite on machine sensor data (stops, MTBF, OEE, waste) for 12 production lines, used by 80+ technicians, admin staff and factory leaders.
 2. *[reliability]* Partnered with maintenance on root-cause analysis using Lean Six Sigma methods, raising packing-machine MTBF from under 10 to 60+ minutes (6×) and plant OEE from ~65% to ~71%, beating the 70% target.
 3. *[automation]* Automated data cleansing and transformation in SQL and Power Query, replacing manual production reports.
