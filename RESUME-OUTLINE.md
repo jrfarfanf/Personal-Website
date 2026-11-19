@@ -46,7 +46,7 @@ Senior BI developer and data lead with 7+ years in data analytics and 10+ years 
 - **Leadership & Governance:** stakeholder management, requirements gathering, data governance, data quality, master data management, KPI standardization, change management, mentoring, coaching
 - **Project Delivery & Platforms:** project management, Azure DevOps, Agile/Scrum, sprint planning, backlog management, SAP ECC/Fiori (ERP), NetSuite, Dayforce
 - **Manufacturing & Process Improvement:** Lean Six Sigma methods, root cause analysis, OEE, MTBF, SPC, Lean manufacturing, cost-benefit analysis, bills of materials (BOM)
-- **AI & Automation:** AI-assisted development (Claude Code, MCP servers), LLM workflow automation
+- **AI & Automation:** AI-assisted development (Claude Code with MCP servers to develop, test and validate; GitHub Copilot), LLM workflow automation
 - **Languages:** English (fluent), Spanish (native)
 
 ### EXPERIENCE
@@ -62,6 +62,7 @@ Biffa Waste Services — London, United Kingdom (Hybrid)
 4. *[definitions]* Partnered with the Sales and Finance business owners to standardize revenue definitions, including the variants used for bonus calculations, so reporting and sales bonuses run on one agreed number.
 5. *[delivery]* Brought a structured approach to project management and execution: introduced Azure DevOps sprint delivery for the 8-person BI team, with a prioritized, visible backlog and cost-benefit sizing (time saved × labor cost, revenue at risk) for each project.
 6. *[governance]* Owned model governance and administrative controls (row-level security, deployment pipelines, refresh reliability); cut refresh time from 20 to 5 minutes while covering more data.
+7. *[ai]* Used AI-assisted development with Claude Code and MCP connections to the Power BI semantic model to develop, test and validate DAX measures and model changes before release.
 
 **Continuous Improvement and Data Quality Executive**
 BAT (British American Tobacco) — Southampton, United Kingdom
